@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--     
+        Credits: Berend/Jens/Mari/Saloua
+        Toggle Word Wrap aan om de leesbaarheid te vergroten (alt+Z)
+        Een paar theorie-opdrachten hebben stukjes code nu in deze comment tag staan.
+        Sommige van deze stukjes code zijn in de opdrachten EN in de HTML verwerkt, maar niet allemaal.
+        Alle opdrachten die niet in de theorie comment staan zijn in de HTML verwerkt.
+        Het ziet er helaas niet heel erg mooi uit.
+
+        
+        Theorie:
+
+        1.1: Wat is het verschil tussen het internet en het world wide web?
+
+        Internet is de verbinding tussen verschillende servers, computers en apparaten (enorm openbaar netwerk). Om toegang te krijgen tot the World Wide Web heb je internet nodig. 
+        WWW is een set afspraken over web-protocollen, zoals het gebruik van URLs, HTTP en HTML.
+
+
+        1.2: Wat is het verschil tussen HTML, CSS en JavaScript?
+
+        HTML: de standaard opmaaktaal voor webpagina's waar de inhoud kan worden toegevoegd.
+        CSS: de taal die we gebruiken om een ​​HTML-document op te maken en de layout van een webpagina te specificeren.
+        Javascript: een programmeertaal om het gedrag van webpagina’s aan te passen en meer levendig en interactief te maken.
+
+        1.3: Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit je een HTML tag. Maak hiervoor voorbeelden en leg uit. 
+
+        HTML tags worden gebruikt om elementen te beginnen en te eindigen. Elementen zijn onderdeel van een HTML bestand in een browser.
+        <h1>Dit</h1> zijn de opening en closing tags van het h1 element, wat een header maakt van het woordje 'dit.'
+
+
+        1.4: HTML gebruikt basis tags om structuur op te bouwen. De <html>, <head> en <body>. Geef voor elke element aan waarvoor het dient. 
+
+        <html> het top-level (of root) element waar alle andere elementen in zitten
+        <head> het element waarin alle metadata van de pagina zit, veelal voor zoekmachines maar ook voor de titel, Javascript en/of CSS.
+        <body> het element waarin alle content van de pagina zit.
+        
+
+        1.5: Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen ? Geef minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast.
+        
+        Attributen bevatten informatie over het betreffende element en zijn altijd gespecificeerd in de opening tag. Laten we als voorbeeld een IMG tag bekijken:
+            <img src="img/gember_thee.jpg" alt="gember thee" width="100" class="voorbeeld" id="gember1">
+        - src; voor het aangeven van de locatie van het plaatje
+        - alt; de tekst die bij mouse-over bij het plaatje verschijnt
+        - width; om de breedte van het plaatje aan te passen.
+        - class; voor het aanmaken van classificaties voor je elementen, zodat je ze als groep kunt aanspreken
+        - id; om het element een ID / naam te geven, zodat je  bv in de css het element makkelijk kunt aanspreken
+
+
+        1.6: Waarom is een goede HTML Structuur belangrijk? Is deze code een goede structuur? Leg uit.
+
+        Goede HTML structuur is belangrijk om je pagina overzichtelijk en leesbaar te houden.
+        De gelinkte code is geen goede structuur, omdat deze geen tags gebruikt voor paragraphs of headers. 
+        In de code ziet dat er prima uit maar op de webpagina zelf niet.
+
+
+        1.7: Wat is het verschil tussen inline en block elementen?
+
+        Een block element begint altijd op een nieuwe regel en neemt de hele breedte in beslag. 
+        Het kan gaan om één regel of meerdere regels. Een inline element start niet op een nieuwe regel en bestaat maar uit één regel.
+
+
+        1.8: Wat betekent nesting? Codeer een voorbeeld met nesting erin.
+
+        Nesting betekent dat je het ene element 'nestelt' binnen een ander element. Dit kan je gebruiken om een paar elementen bij elkaar te groeperen, zoals bij div containers, om overzicht / structuur in je content aan te brengen. 
+        Je kunt naar de relatie van de elementen kijken als parent-child. Zowel inline elementen als block elementen kunnen genest worden, en de block elementen kunnen ook meerdere lagen diep genesteld worden. Er dient dan wel goed opgelet te worden wat waar wordt geopend of gesloten, want hoe meer lagen, hoe minder overzichtelijk de html structuur te lezen is. 
+        Voorbeeld: div van 2 nested lagen diep:
+            <div class="outer-parent">
+                    <div class="inner-div">
+                            <p>This is a paragraph, nested in the first inner-div</p>
+                    </div>
+                    <div class="inner-div">
+                            <p>This is another paragraph, in the 2nd inner-div</p>
+                    </div>
+            </div>
+
+
+        1.9: Sinds de komst van HTML5 zijn er elementen die betekenissen hebben. Wat wordt er bedoeld met HTML semantics? Waarom is het gebruik van semantics belangrijk?  
+
+        Semantiek verwijst naar de juiste interpretatie van de betekenis van een woord of zin. Met HTML semantics wordt bedoeld dat HTML-elementen al enige informatie overbrengen over het type inhoud dat zich tussen de openende en sluitende tags bevindt. Door correct gebruik te maken van semantics is de opmaak zowel door mensen als machinaal leesbaar.
+
+
+        1.10: Wat voor content zou je in de volgende elementen gebruiken? Geef in je antwoord voor elk element een toelichting. 
+
+        ●<header>   Het 'hoofd' van een pagina, met daar vaak het logo van de site en een navigatie menu
+        ●<footer>   De 'voeten' van je structuur-> het onderste gedeelte van een pagina, met bv contact informatie, copyright...
+        ●<main>     Het kerngedeelte van een pagina, zoals de producten, prijs en omschrijving bij een webshop   
+        ●<nav>      een navigatie menu of systeem, voor links binnen de pagina of naar andere pagina's binnen de site
+        ●<section>  Om je pagina in enkele topics te verdelen. Bijvoorbeeld 1 sectie met alles over theesoorten, 1 sectie over locaties, 1 sectie over het brouwproces
+        ●<aside>    Voor het aangeven van wat extra informatie, die eigenlijk niet nodig is voor de betreffende content. Denk aan een leuk weetje over een gebouw, of korte uitleg waaraan een relatief onbekend begrip refereert.
+        ●<article>  Geeft aan dat dit groepje onafhankelijke, vrijstaande informatie bevat. In andere woorden vormt dit groepje een artikel.
+
+
+        1.11: Onderzoek en leg uit waarom headers zaowel belangrijk zijn voor zoekmachines als voor de gebruikers. 
+
+        Headers trekken de aandacht van de gebruiker en het kondigt de pagina inhoud aan.
+        Heading tags zijn belangrijk voor zoekmachines om de informatie te indexeren.
+        Een goed passende header is helder voor lezers en helpt tegelijkertijd mensen je pagina te vinden.
+
+
+        1.12: Onderzoek hoe je een text-header aanmaakt en reproduceer het volgende resultaat: 
+
+        <header>Headings opdrachten</header>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+
+        1.13: Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt. Geef hier een voorbeeld bij.
+
+        <p>Paragraph tags worden gebruikt om een of meerdere zinnen in 1 paragraaf te zetten, dwz zonder linebreaks ertussenin.<p>
+
+        
+        1.14: Onderzoek en leg het verschil tussen het stoppen van alle tekst in één paragraaf tag,en het opsplitsen van de tekst in meerdere tags uit.
+
+        <p>Meerdere paragraph tags maken dus meerdere paragrafen.</p>
+        <p>En deze paragrafen hebben WEL linebreaks tussen elkaar.</p>
+
+        1.15: Reproduceer het volgende resultaat door gebruik te maken van text-headers en de paragraaf tags.
+
+        Zie verderop in dit document. De footer is geen echte footer, eronder staat content voor latere vragen.
+
+        
+        1.16: Voeg een Horizontal rule toe en reproduceer het volgende resultaat. 
+
+        Zie verderop in dit document.
+
+
+        1.17: Voeg een link tag toe en reproduceer het volgende resultaat in de footer.
+
+        Zie verderop in dit document.
+
+
+        1.18: Onderzoek welke 4 attributen een link tag kan hebben, leg uit wat deze doen en voeg deze als voorbeeld toe op je website
+        
+        href = locatie van de links
+        target = waar wordt de link geopend, zelfde tab, nieuwe tab of > blank window
+        rel = relatie tussen pagina waarop je bent en de link
+        referrerpolicy = of de gelinkte pagina te horen krijgt waar de gebruiker vandaan komt (zoekmachine, facebook, etc)(voor voorbeeld zie boven)
+
+
+        2.1: Bij het inladen van een bestand is het noodzakelijk om de locatie van het bestand aan te geven. Dit kan op 2 manieren:
+        ● Absolute path
+        ● Relative path
+        Wat houden deze 2 paths in?
+
+        Absolute path is de locatie van een file in de computer.
+        Relative path is de locatie van een file t.o.v. de working directory.
+
+        
+        2.2: Een image element is voor het inladen van een afbeelding. Afbeeldingen kunnen van verschillende formaat zijn. Bijvoorbeeld, een afbeelding kan een JPG formaat zijn.
+        Zoek uit welke formaat afbeeldingen er nog meer kan zijn.
+
+        ● PNG
+        ● BMP
+        ● GIF
+        ● TIFF
+
+
+        2.3: Een afbeelding tonen is afhankelijk van of de browser het ondersteunt.
+        Zoek uit welke browsers er zijn en maak een lijst van je antwoord.
+        
+        Chrome: JPG,PNG,GIF,BMP
+        Safari: JPG,PNG,GIF,TIFF,BMP
+        Microsoft Edge: JPG,PNG,GIF,TIFF,BMP
+        Mozilla firefox: JPG,PNG,GIF,TIFF,BMP
+        Internet explorer: JPG,PNG,GIF,TIFF,BMP
+
+
+        2.4: Onderzoek hoe het plaatsen van een foto gedaan wordt en plaats deze boven
+        en onderaan je website door zowel gebruik te maken van de absolute path en
+        relative path.
+
+        <img src="Resources/TG_Logo.png"> Relative
+        <img src="https://techgrounds.nl/static/media/TG_Logo.d5934b2d.png"> Absolute
+        Zie ook verderop in dit document.
+
+
+        2.5: Wat houdt de alt attribute in? En waarom is het handig om de alt attribuut te gebruiken?
+
+        De alt attribute bevat extra tekst bij een plaatje. Die tekst wordt weergegeven op het moment dat je met je muis op het plaatje rust. Dit kan handig zijn om context aan een plaatje te geven, evt te verduidelijken wat het plaatje eigenlijk is, en last but not least wordt er door zoekmachine's naar deze tekst gekeken om te bepalen hoe relevant een webpagina is voor bepaalde topics.
+
+        
+        2.6: Laadt dit bestand in als een audio op het scherm.
+        Extra: Maak het leuker door de audio op repeat te zetten.
+        Tip: gebruik controls attribute om audio af te spelen.
+
+        <audio controls loop>
+        <source src="\HTML\Resources\Explosie SFX\Big drum.wav" type="audio/wav">
+        </audio>
+        Zie ook verderop.
+
+        2.7: Speel een audio bestand af met <source> tag. Leg uit wat hier het voordeel van is.
+
+        Door binnen een audio (of video) bestand te werken met source tag, is het mogelijk om voor 1 nummer meerdere bronnen aan te geven. Op deze manier kan je voorkomen dat een bestand niet laadt door compatabiliteits problemen. Met name met video files kan dit handig zijn, omdat niet alle computers dezelfde codecs geïnstalleerd hebben.
+
+        <audio controls>
+        <source src="/Resources/Heartbeat.wav" type="audio/wav">
+        <source src="/Resources/Heartbeat.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+        </audio>
+        Zie ook verderop.
+
+
+        2.8: Zoek een willekeurig video en sla dit op in je computer. Laadt dit bestand in als een video op het scherm.
+        Tip: De video is veel groter dan het scherm. Zoek uit welke attribuut je voor de video element kan gebruiken om de grootte van de video aan te passen.
+
+         <video width="320"  controls>
+              <source src="\HTML\Resources\Why are You Running.mp4" type="video/mp4">
+         </video>
+         Zie ook verderop in dit document.
+
+
+        2.10: Bouw een navigatiebalk door gebruik te maken uit een lijst dat bestaat uit de volgende onderdelen.
+
+            <nav><ul>
+                <li><a href="#tigers">Tigers</a> </li>
+                <li><a href="#lions">Lions</a> </li>
+                <li><a href="#monkeys">Monkeys</a> </li>
+                <li><a href="#hippopotamus">Hippopotamus</a> </li>
+            </ul></nav>
+
+
+        3.1: Maak een HTML form waarbij de gebruiker zijn naam en achternaam in kan vullen. Zie hieronder voor een voorbeeld:
+    
+        <form action="mailto:info@TechGrounds.nl" method="POST" enctype="text/plain">
+            <label>Voornaam: </label>
+            <input type="text" name="Voornaam"><br>
+            <label>Achternaam: </label>
+            <input type="text" name="Achternaam"><br>
+            <input type="submit">
+        </form>
+
+
+        3.6: We hebben nu geleerd hoe je dropdown list, radio buttons en checkboxes maak. Dit zijn 3 verschillende manieren om de gebruiker een keuze te laten maken. Benoem voor dropdown list, radio buttons en checkboxes een situatie waar je in kan gebruiken en leg dat uit.
+
+        Dropdown list: Bij het inschrijven voor een opleiding. Om de juiste onderwijsinstelling te selecteren kan gebruik worden gemaakt van deze optie.
+        Radio buttons: Bij het aangeven van het geslacht. Daarbij zijn er meestal drie opties: man, vrouw of anders.
+        Checkboxes: Bij het invullen van een lijst met symptomen is het handig om meerdere opties aan te kruisen.
+
+
+        3.10 Om een tabel te maken heb je volgende elementen nodig. Geef voor elke element een definitie:
+
+        <table> Als je veel verschillende data-points van verschillende onderwerpen overzichtelijk bij elkaar wilt brengen, kan die informatie overzichtelijk in een tabel. De tabel tag groepeert deze info. 
+  
+        <td> Table cell; een enkele cell binnen een tabel, dus de kleinste eenheid
+  
+        <tr> Table row; (start van een) nieuwe rij binnen je tabel
+  
+        <thead> Table Head element; groepeert header content van een tabel
+  
+        <th> Table heading; Voor het maken tot heading van een cel (en dus bijbehorende kolom), voor het aangeven van wat voor data er in die kolom staat.
+  
+        <tbody> Table Body element; groepeert alle 'core' data van een tabel.
+  
+        <tfoot> Table footer; voor het aangeven van de footer van een tabel, dus de onderste rij, die bijvoorbeeld een optelsom van bovenstaande getallen kan bevatten.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Opdracht 2.11, deel 1-->
+    <nav>
+        <ul>
+            <li><a href="#tigers">Tigers</a> </li>
+            <li><a href="#lions">Lions</a> </li>
+            <li><a href="#monkeys">Monkeys</a> </li>
+        </ul>
+    </nav>
+
+    <!-- Opdracht 1.15 + 1.16 + 1.17 -->
+    <h1>Mijn eerste website</h1>
+    <h2> Mijn eerste sub-kop</h2>
+    <p>Lorem ipsum DimSum </p>
+    <h2> Mijn tweede sub-kop</h2>
+    <p>paragraaf numero uno</p><br>
+    <p>paragraaf numero duo</p>
+    <hr>
+    <h1>Footer</h1>
+    <p>deze website is gebouwd door het meest getalenteerde groepje van de <a href="http://www.techgrounds.nl"
+            target="blank" rel="external">TechGrounds Academy</a></p>
+
+    <!-- Opdracht 2.4 - staat alleen niet bovenaan + onderaan ivm overzichtelijkheid -->
+    <img src="Resources/TG_Logo.png"><img src="https://techgrounds.nl/static/media/TG_Logo.d5934b2d.png">
+    
+    <br>
+    <!-- opdracht 2.6 -->
+    <audio controls loop>
+        <source src="\HTML\Resources\Explosie SFX\Big drum.wav" type="audio/wav">
+    </audio>
+
+    <br>
+    <!-- Opdracht 2.7 -->
+    <video width="320" controls>
+        <source src="\HTML\Resources\Why are You Running.mp4" type="video/mp4">
+    </video>
+    </br>
+    <!-- Opdracht 2.9 -->
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+    
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <ol>
+            <li>sub item 1</li>
+            <li>sub item 2</li>
+        </ol>
+        <li>item 3</li>
+    </ol>
+    
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <ul>
+            <li>sub item 1</li>
+            <li>sub item 2</li>
+        </ul>
+        <li>item 3</li>
+    </ul>
+    
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <ol>
+            <li>sub item 1</li>
+            <li>sub item 2</li>
+        </ol>
+        <li>item 3</li>
+    </ul>
+    </br>
+
+    <!-- opdracht 2.11, deel 2-->
+    <h3 id="tigers">Tigers</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae enim ipsam quod voluptates, laboriosam
+        deleniti impedit adipisci dolore maiores esse deserunt earum vero ad at? Minima eaque necessitatibus incidunt
+        cupiditate blanditiis nihil reiciendis, vel voluptates labore, minus odio numquam ipsa exercitationem ab
+        molestias eveniet! Praesentium tenetur nostrum possimus non officiis aliquid, et deserunt amet! Quasi iure saepe
+        laboriosam animi officiis accusamus quo placeat iusto officia fuga reprehenderit ratione quaerat vero libero
+        atque repudiandae maiores, suscipit voluptatum voluptas consequuntur et reiciendis. Esse ad eius earum, nihil
+        hic eaque molestias cum reprehenderit vel molestiae! Corrupti quam ducimus labore dignissimos quis, distinctio
+        dolorem sunt quisquam voluptatibus aliquam itaque et ratione recusandae eveniet totam ipsam quod provident?
+        Tempora labore harum facere ullam unde, nesciunt omnis. Architecto ducimus incidunt explicabo nesciunt quisquam
+        dolore dolorem expedita nulla accusantium eveniet amet eum, aliquam sint eos aperiam a animi totam suscipit
+        quidem perspiciatis accusamus quaerat id cupiditate ut. Cumque dolorum omnis adipisci ut aspernatur sequi
+        aliquam! Repellendus distinctio saepe, pariatur modi iste aspernatur fugit, incidunt quae eum beatae vitae!
+        Consequatur obcaecati alias omnis ratione eligendi repellendus soluta placeat sint cupiditate illo in ipsum
+        dolor, necessitatibus ab qui unde veniam numquam maxime et cumque? Dolor, corrupti? Consequatur, eos saepe.</p>
+
+    <h3 id="lions">Lions</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsam temporibus veniam at rerum error eaque
+        laudantium voluptates quos mollitia aliquam accusantium veritatis expedita, illum ut saepe libero sit enim
+        numquam! Veniam quos minima quam temporibus labore! Voluptatum dolor consequuntur amet placeat quae nemo
+        perspiciatis accusantium nulla, numquam quibusdam eos voluptas facilis esse aut corrupti modi voluptatem earum
+        doloribus ad reprehenderit mollitia saepe. Ratione eaque rem eius iure eum dolor maxime? Sint iste sed tenetur.
+        Dolore quisquam nulla magni accusantium voluptates minus error est, nihil facere alias! Explicabo dignissimos
+        exercitationem quam perferendis ratione suscipit, deserunt dolorum provident vitae non perspiciatis ut, mollitia
+        tempora sed aliquam illo corrupti facilis dolores consequuntur expedita recusandae aspernatur reiciendis ipsam
+        debitis. Molestias tenetur numquam exercitationem, inventore delectus repudiandae error pariatur. Illo id
+        commodi quia, rem eligendi soluta temporibus odio nesciunt doloribus optio quasi explicabo vitae eos ea adipisci
+        quis ad asperiores distinctio pariatur nostrum aliquid. Magnam sequi ullam corrupti placeat esse voluptatum,
+        deserunt quaerat odit? Veritatis sunt, hic repudiandae, fuga perspiciatis reiciendis quae inventore delectus
+        vero facere excepturi maiores iste obcaecati. Iure, blanditiis. Odio possimus tenetur blanditiis natus
+        dignissimos, adipisci iusto perspiciatis dolor officia accusamus, eos incidunt dolorem? Omnis ab beatae optio
+        enim voluptas fuga.</p>
+
+    <h3 id="monkeys">Monkeys</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta itaque adipisci dolorum vel tempora laborum
+        doloremque. Eaque temporibus, reiciendis voluptatibus reprehenderit laborum deleniti repellat laboriosam
+        voluptas similique. Perspiciatis eos quas porro excepturi repellat tempora possimus nisi voluptatibus ipsum
+        sapiente at expedita nemo molestiae dolore dolorem quidem, provident iste facere quia eum ratione consequuntur
+        nihil. Vitae sint mollitia totam ad itaque ipsam omnis hic, non ea beatae vel rerum error explicabo sunt
+        expedita labore ducimus quibusdam corporis distinctio! Error inventore dolorem et magni magnam pariatur cumque
+        similique deleniti, culpa, neque minus quaerat facilis saepe veniam laborum ad tempore. Amet sunt molestias iure
+        corporis expedita voluptatem rem rerum laudantium blanditiis dolorum cumque repellat labore quisquam facilis
+        deserunt iusto magnam sapiente fugit, porro dolor? Aliquam atque consectetur impedit maiores ducimus mollitia,
+        rem tenetur omnis minus nam perferendis cupiditate repudiandae laborum minima! Sint facilis aspernatur hic odio,
+        ipsum quidem libero repudiandae repellendus unde, quod dolores beatae vitae, quasi aperiam vero perferendis
+        ratione modi veniam nobis quo eveniet at. Autem, at, voluptatum rem voluptas iusto quidem repellat perspiciatis
+        harum modi distinctio obcaecati velit explicabo quae aliquid deserunt reprehenderit excepturi eum eveniet
+        pariatur! Quasi tempora maxime ratione fuga assumenda non deserunt maiores numquam sapiente molestiae.</p>
+
+    <br>
+
+    <!-- Opdracht 3.2 & 3.3-->
+    <fieldset>
+        <legend>Opdracht 2 & 3</legend>
+        <h1>Form Inputs </h1>
+        <form action="mailto:info@techgrounds.nl" method="POST" enctype="text/plain">
+            <label>Voornaam: </label>
+            <input type="text" name="Voornaam"><br><br>
+            <label>Achternaam: </label>
+            <input type="text" name="Achternaam"><br><br>
+            <label>Wenst u A, B of C?</label><br>
+            <input type="radio" id="A" name="keuze" value="A"> <label for="A">Keuze A</label><br>
+            <input type="radio" id="B" name="keuze" value="B"> <label for="B">Keuze B</label><br>
+            <input type="radio" id="C" name="keuze" value="C"> <label for="C">Keuze C</label><br><br>
+            <label>Heb je dit gelezen?</label>
+            <input type="checkbox" name="checkbox"> <br>
+            <label>Datum Picker:</label>
+            <input type="date" name="date"><br>
+            <label>Tijd Selector:</label>
+            <input type="time" name="time"> <br>
+            <label>Zoeken: </label>
+            <input type="search" name="search"> <br>
+            <label>Hier staat niets hoor...</label>
+            <input type="hidden" name="hidden" value="hiddenvalue"> <br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd"><br>
+            <label>Email:</label>
+            <input type="email" name="email"> <br>
+            <input type="reset" value="Reset">
+            <input type="submit">
+        </form>
+    </fieldset>
+
+    <!--Opdracht 3.4-->
+    <form action="mailto:inf" method="POST" enctype="text/plain">
+        <fieldset>
+            <legend>Persoons gegevens</legend>
+            <p>
+                <label>Achternaam: </label>
+                <input type="text" name="Achternaam">
+            </p>
+            <p>
+                <label>Voornaam: </label>
+                <input type="text" name="Voornaam">
+            </p>
+            <p>
+                <label>Geboortedatum:</label>
+                <input type="date" name="date">
+            </p>
+            <p>
+                <label>M: </label>
+                <input type="radio" id="M" name="gender" value="A">
+                <label>V: </label>
+                <input type="radio" id="V" name="gender" value="B">
+            </p>
+            <p>
+                <label>Postcode: </label>
+                <input type="text" name="Postcode">
+            </p>
+            <p>
+                <label>Adres: </label>
+                <input type="text" name="Adres">
+            </p>
+        </fieldset>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <br><br>
+
+        <!--Opdracht 3.5-->
+        <fieldset>
+            <legend>Opdracht 5</legend>
+            <form action="/action_page.php">
+                <label for="dropdown">dit is een:</label>
+                <select name="dropdown" id="list">
+                    <option value="drop">drop</option>
+                    <option value="down">down</option>
+                    <option value="list">list</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </fieldset>
+
+        <!--Opdracht 3.7-->
+        <h2>Sport Reservering </h2>
+        <form action="mailto:info@techgrounds.nl" method="POST" enctype="text/plain">
+            <fieldset>
+                <label>Voornaam:</label><br>
+                <input type="text" name="Voornaam"><br>
+                <label>Achternaam: </label><br>
+                <input type="text" name="Achternaam"><br>
+                <label>Email:</label><br>
+                <input type="email" name="email"> <br><br>
+                <label>Bent u al lid?</label><br>
+                <input type="radio" id="ja" name="keuze" value="ja"> <label for="ja">ja</label><br>
+                <input type="radio" id="keuze" name="keuze" value="nee"> <label for="nee">nee</label><br>
+
+                <br><label for="reserve">Sport</label>
+                <select name="sport" id="sport">
+                    <option value="tennis">tafeltennis</option>
+                    <option value="badminton">badminton</option>
+                    <option value="squash">squash</option>
+                </select>
+                <br><br>
+                <label>Datum:</label>
+                <input type="date" name="date"><br>
+                <label>Tijd:</label>
+                <input type="time" name="time"> <br>
+                <label>Gaat u akkoord?</label>
+                <input type="checkbox" name="checkbox"><br>
+                <input type="hidden" name="hidden" value="hiddenvalue"><br>
+
+
+                <input type="submit">
+            </fieldset>
+        </form>
+
+
+        <!--Opdracht 3.8-->
+        <h2>Reserveringsformulier</h2>
+
+        <p>Voor het reserveren van een boek, hebben wij de volgende gegevens nodig. Alvast veel leesplezier!</p>
+
+        <form action="/action_page.php">
+            <fieldset>
+                <label for="name">Naam:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="telnr">Telefoonnummer:</label><br>
+                <input type="text" id="telnr" name="telnr" value=+316><br>
+                <label for="mail">E-mail:</label><br>
+                <input type="text" id="mail" name="mail" <br><br>
+                <label for="boek">Naam van boek:</label><br>
+                <input type="text" id="boek" name="boek"><br><br>
+                <label for="dropdown">Aantal boeken:</label>
+                <select name="dropdown" id="list">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+
+        <!-- Opdracht 3.9 -->
+
+        <form action="action_page.php">
+            <h2>Evaluatie Enquete</h2>
+            <fieldset style="width:600px">
+                <h3>ONDERWERP</h3>
+                <input type="text" />
+                <h3>COACH</h3>
+                <input type="text" />
+
+                <h4>Geef je mening over de volgende stellingen:</h4>
+                <div>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Sterk Oneens</th>
+                            <th>Oneens</th>
+                            <th>Neutraal</th>
+                            <th>Eens</th>
+                            <th>Sterk Eens</th>
+                        </tr>
+                        <tr>
+                            <td>1. De coach was vakbekwaam en was goed in staat materie over te brengen.</td>
+                            <td><input type="radio" value="none" name="bekwaam" /></td>
+                            <td><input type="radio" value="none" name="bekwaam" /></td>
+                            <td><input type="radio" value="none" name="bekwaam" /></td>
+                            <td><input type="radio" value="none" name="bekwaam" /></td>
+                            <td><input type="radio" value="none" name="bekwaam" /></td>
+                        </tr>
+                        <tr>
+                            <td>2. De coach heeft voldoende individuele aandacht gegeven.</td>
+                            <td><input type="radio" value="none" name="aandacht" /></td>
+                            <td><input type="radio" value="none" name="aandacht" /></td>
+                            <td><input type="radio" value="none" name="aandacht" /></td>
+                            <td><input type="radio" value="none" name="aandacht" /></td>
+                            <td><input type="radio" value="none" name="aandacht" /></td>
+                        </tr>
+                        <tr>
+                            <td>3. De coach was altijd goed voorbereid en georganiseerd</td>
+                            <td><input type="radio" value="none" name="voorbereid" /></td>
+                            <td><input type="radio" value="none" name="voorbereid" /></td>
+                            <td><input type="radio" value="none" name="voorbereid" /></td>
+                            <td><input type="radio" value="none" name="voorbereid" /></td>
+                            <td><input type="radio" value="none" name="voorbereid" /></td>
+                        </tr>
+                        <tr>
+                            <td>4. Het gebruikte lesmateriaal was duidelijk en prettig leesbaar</td>
+                            <td><input type="radio" value="none" name="leesbaar" /></td>
+                            <td><input type="radio" value="none" name="leesbaar" /></td>
+                            <td><input type="radio" value="none" name="leesbaar" /></td>
+                            <td><input type="radio" value="none" name="leesbaar" /></td>
+                            <td><input type="radio" value="none" name="leesbaar" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>Overige Feedback & Suggesties:</h4>
+                <textarea rows="5"></textarea><br>
+                <button type="submit" href="/">Send</button>
+            </fieldset>
+
+
+        </form>
+
+        <br>
+
+            <!--Opdracht 3.11-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Voornaam</th>
+                    <th>Achternaam</th>
+                    <th>Leeftijd</th>
+                    <th>Telefoonnr</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>41</td>
+                    <td>+31 12345678</td>
+                </tr>
+                <tr>
+                    <td>Steven</td>
+                    <td>Smith</td>
+                    <td>32</td>
+                    <td>+31 12345678</td>
+                </tr>
+                <tr>
+                    <td>Alexander</td>
+                    <td>Beave</td>
+                    <td>16</td>
+                    <td>+31 12345678</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <!--Opdracht 3.12-->
+
+        <table>
+            <thead>
+                <tr>
+                    <th>MA</th>
+                    <th>DI</th>
+                    <th>WO</th>
+                    <th>DO</th>
+                    <th>VR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Afspraak met tandarts</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Sporten</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Huiswerk maken</td>
+                    <td>Werken</td>
+                    <td>Werken</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Afspraak met tandarts</td>
+                    <td></td>
+                    <td></td>
+                    <td>Werken</td>
+                    <td>Bij vrienden</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <!--Opdracht 3.13-->
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Sport</th>
+                    <th>Aantal recreanten</th>
+                    <th>Aantal competitie spelers</th>
+                    <th>Totale deelnemers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Racket sport</td>
+                    <td>Badminton</td>
+                    <td>10</td>
+                    <td>30</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Tafeltennis</td>
+                    <td>59</td>
+                    <td>30</td>
+                    <td>89</td>
+                </tr>
+                <tr>
+                    <td>Tennis</td>
+                    <td>59</td>
+                    <td>130</td>
+                    <td>189</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Ball sport</td>
+                    <td>Voetbal</td>
+                    <td>88</td>
+                    <td>40</td>
+                    <td>128</td>
+                </tr>
+                <tr>
+                    <td>Basketbal</td>
+                    <td>60</td>
+                    <td>40</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Volleybal</td>
+                    <td>35</td>
+                    <td>20</td>
+                    <td>55</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Opdracht 3.14-->
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Groep</th>
+                    <th colspan="4">Leden</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mandy</td>
+                    <td>Nanayaa</td>
+                    <td>Halilurraham</td>
+                    <td>Hoisan</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Riga</td>
+                    <td>Francis</td>
+                    <td>Abraham</td>
+                    <td>Floor</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Jouke</td>
+                    <td>Sunny</td>
+                    <td>Imani</td>
+                    <td>Sanae</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Berend</td>
+                    <td>Jens</td>
+                    <td>Mari</td>
+                    <td>Saloua</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Irene</td>
+                    <td>Daniel</td>
+                    <td>Kacem</td>
+                    <td>Kristoffer</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Hyacinthia</td>
+                    <td>Borja</td>
+                    <td>Michael</td>
+                    <td>Mohamed</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+</body>
+
+</html>
