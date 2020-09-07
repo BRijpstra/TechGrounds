@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdrachten - HTML Elementen</title>
+</head>
+<body>
+<!--2.1: Bij inladen van bestanden zijn er 2 paths mogelijk om de locatie aan te geven:
+    Absolute path is de ABSOLUTE locatie van een file, bijvoorbeeld ergens op de C schijf van je computer, of je kunt verwijzen naar een plaatje wat al ergens op internet staat.
+    Relative path is de RELATIEVE locatie van een file, dus relatief t.o.v. de working directory van de html.
+
+2.2: Een image element is voor het inladen van een afbeelding. Afbeeldingen kunnen van verschillende formaat zijn. Andere formaten voor afbeeldingen zijn:
+    ● PNG
+    ● BMP
+    ● GIF
+    ● TIFF
+    ● WebP
+    ● SVG
+
+2.3: Zoek uit welke browsers er zijn en maak een lijst van hun image format compatability:
+    Chrome: JPG,PNG,GIF,BMP
+    Safari: JPG,PNG,GIF,TIFF,BMP
+    Microsoft Edge: JPG,PNG,GIF,TIFF,BMP
+    Mozilla firefox: JPG,PNG,GIF,TIFF,BMP
+    Internet explorer: JPG,PNG,GIF,TIFF,BMP
+
+2.4: Onderzoek hoe het plaatsen van een foto gedaan wordt en plaats deze boven en onderaan je website door zowel gebruik te maken van de absolute path en relative path.
+-->
+    <h3>2.4 & 2.5 - Plaatjes plaatsen met relative & absolute path</h3>
+    <img src="Resources/TG_Logo.png" alt="relative pathway taken to the logo">
+    <img src="https://techgrounds.nl/static/media/TG_Logo.d5934b2d.png" alt="absolute pathway to the logo">
+    <br>
+
+<!--2.5: Wat houdt de alt attribute in? En waarom is het handig om de alt attribuut te gebruiken?
+    De alt attribute bevat extra tekst bij een plaatje. Die tekst wordt weergegeven op het moment dat je met je muis op het plaatje rust. Dit kan handig zijn om context aan een plaatje te geven, evt te verduidelijken wat het plaatje eigenlijk is, en last but not least wordt er door zoekmachine's naar deze tekst gekeken om te bepalen hoe relevant een webpagina is voor bepaalde topics.
+
+ 2.6: Laadt dit bestand in als een audio op het scherm en maak het leuker door de audio op repeat te zetten. -->
+
+    <h3>2.6 - Looping Audiospeler</h3>
+    <audio controls loop>
+        <source src="Resources\Big drum.wav" type="audio/wav">
+    </audio>
+    <br>
+<!--2.7: Speel een audio bestand af met <source> tag. Leg uit wat hier het voordeel van is.
+    Door binnen een audio (of video) bestand te werken met source tag, is het mogelijk om voor 1 nummer meerdere bronnen aan te geven. Op deze manier kan je voorkomen dat een bestand niet laadt door compatabiliteits problemen. Met name met video files kan dit handig zijn, omdat niet alle computers dezelfde codecs geïnstalleerd hebben. -->
+
+    <h3>2.7 - audiospeler met high-res (WAV) en backup low-res (mp3) sources</h3>
+    <audio controls>
+        <source src="Resources/Heartbeat-hires.wav" type="audio/wav">
+        <source src="Resources/Heartbeat-lowres.mp3" type="audio/mp3">
+    </audio>
+
+<!--2.8: Zoek een willekeurig video en sla dit op in je computer. Laadt dit bestand in en pas een attribuut aan om de grootte van de video aan te passen:--->
+
+<h3>2.8 Resized weergave van een video</h3>
+    <video width="700" controls>
+        <source src="Resources\Doutzen.mp4" type="video/mp4">
+    </video>
+    </br>
+
+<h3>2.9 - Items plaatsen in lijsten</h3>
+<ol>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ol>
+<ol>
+    <li>item 1</li>
+    <li>item 2</li>
+    <ol>
+        <li>sub item 1</li>
+        <li>sub item 2</li>
+    </ol>
+    <li>item 3</li>
+</ol>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <ul>
+        <li>sub item 1</li>
+        <li>sub item 2</li>
+    </ul>
+    <li>item 3</li>
+</ul>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <ol>
+        <li>sub item 1</li>
+        <li>sub item 2</li>
+    </ol>
+    <li>item 3</li>
+</ul>
+
+<h3>2.10 - HTML Navigatiebalk</h3>
+    <nav>
+        <ul>
+            <li><a href="#tigers">Tigers</a> </li>
+            <li><a href="#lions">Lions</a> </li>
+            <li><a href="#monkeys">Monkeys</a> </li>
+        </ul>
+    </nav>
+
+<h2>Navigatie Bestemmingen</h2>
+<h3 id="tigers">Tigers</h3>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae enim ipsam quod voluptates, laboriosam deleniti impedit adipisci dolore maiores esse deserunt earum vero ad at? Minima eaque necessitatibus incidunt cupiditate blanditiis nihil reiciendis, vel voluptates labore, minus odio numquam ipsa exercitationem ab molestias eveniet! Praesentium tenetur nostrum possimus non officiis aliquid, et deserunt amet! Quasi iure saepe laboriosam animi officiis accusamus quo placeat iusto officia fuga reprehenderit ratione quaerat vero libero atque repudiandae maiores, suscipit voluptatum voluptas consequuntur et reiciendis.</p>
+
+<h3 id="lions">Lions</h3>
+<p>Magnam sequi ullam corrupti placeat esse voluptatum, deserunt quaerat odit? Veritatis sunt, hic repudiandae, fuga perspiciatis reiciendis quae inventore delectus vero facere excepturi maiores iste obcaecati. Iure, blanditiis. Odio possimus tenetur blanditiis natus dignissimos, adipisci iusto perspiciatis dolor officia accusamus, eos incidunt dolorem? Omnis ab beatae optio enim voluptas fuga.</p>
+
+<h3 id="monkeys">Monkeys</h3>
+<p>Amet sunt molestias iure corporis expedita voluptatem rem rerum laudantium blanditiis dolorum cumque repellat labore quisquam facilis deserunt iusto magnam sapiente fugit, porro dolor? Aliquam atque consectetur impedit maiores ducimus mollitia, rem tenetur omnis minus nam perferendis cupiditate repudiandae laborum minima! Sint facilis aspernatur hic odio, ipsum quidem libero repudiandae repellendus unde, quod dolores beatae vitae, quasi aperiam vero perferendis ratione modi veniam nobis quo eveniet at.</p>
+</body>
+</html>

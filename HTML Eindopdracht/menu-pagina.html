@@ -3,42 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Menu</title>
+    <title>Donatello's Pizza Menu</title>
 </head>
+
+<!-- De 4 pizza stukjes bestaan elk uit een een div, met daarin een tabel met 2 vakjes, 1 voor het plaatje en 1 voor de tekst elementen en de button. 
+Ik heb een bescheiden hoeveelheid CSS toegepast; 
+- de breedte van elk pizza div'je, zodat de woorduitlijning overeenkomt met de opdracht
+- De breedte van de pizza <section> en uitlijnings instructie, zodat de 4 divjes netjes met elkaar uitlijnen in de 2 x 2 formatie zoals in de opgave
+- De tekstuitlijning en de plaatsing van de tekst die bij menu staat.-->
+
 <body>
-    <div>
+    <div style="text-align: center; width: 730px;">
         <H1>MENU</H1>
         <p><emphasis>Unique wood fired pizzas or to be tempted by our pasta, antipasto, focaccias, salads and Bruschetta dishes. Relax in the friendly ambience as you enjoy the aromas of the wood ovens or sit al fresco and soak up the Mildura sunshine.</emphasis></p>
     </div> 
 
-    <section>
-        <div class="item">
-            <h2>Original</h2>
-            <img src="images/p-original.png" alt="Pizza Marinara">
+    <section style="display: flex;flex-wrap: wrap; max-width: 850px; justify-content: space-evenly;">
+        <div class="item" style="width: 400px";>
+        <table>
+            <td><img src="images/p-original.png" alt="Pizza Marinara"></td>
+            <td><h2>Original</h2>
             <p>Tomato sauce, mozzarella & oregano</p>
             <p><b>$18.00</b></p>
-            <button>add to cart</button>
+            <button>ADD TO CART</button></td>
+        </table>
         </div>
-        <div class="item">
-            <h2>Salami</h2>
-            <img src="images/p-salami.png" alt="Pizza Salami">
+        <div class="item" style="width: 400px";>
+        <table>
+            <td><img src="images/p-salami.png" alt="Pizza Salami"></td>
+            <td><h2>Salami</h2>
             <p>Tomato sauce, mozzarella & mild salami</p>
             <p><b>$15.00</b></p>
-            <button>add to cart</button>
+            <button>ADD TO CART</button></td>
+        </table>
         </div>
-        <div class="item">
-            <h2>Chicken</h2>
-            <img src="images/p-chicken.png" alt="Pizza Pollo">
+        <div class="item" style="width: 400px";>
+        <table >    
+            <td><img src="images/p-chicken.png" alt="Pizza Pollo"></td>
+            <td><h2>Chicken</h2>
             <p>Tomato Sauce, mozzarella, chicken, pineapple & BBQ sauce</p>
             <p><b>$25.00</b></p>
-            <button>add to cart</button>
+            <button>ADD TO CART</button></td>
+        </table>
         </div>
-        <div class="item">
-            <h2>Hawaiian</h2>
-            <img src="images/p-hawai.png" alt="Pizza Marinara">
+        <div class="item" style="width: 400px;">
+        <table>    
+            <td><img src="images/p-hawai.png" alt="Pizza Marinara"></td>
+            <td><h2>Hawaiian</h2>
             <p>Tomato sauce, mozzarella, ham & pineapple</p>
             <p><b>$16.00</b></p>
-            <button>add to cart</button>
+            <button>ADD TO CART</button></td>
+        </table>
         </div>
     </section>
 </body>
