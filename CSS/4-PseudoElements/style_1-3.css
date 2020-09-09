@@ -1,0 +1,58 @@
+h1::before {
+    content: "|>before<|";
+    color: darkgrey;
+}
+
+h1::after {
+    content: "|>after<|";
+    color: darkgrey;
+}
+
+P::first-letter {
+    font-size: x-large;
+    font-weight: bolder;
+    color: red;
+}
+
+p::first-line {
+    font-size: large;
+    font-weight: bold;
+    color: darkgrey;
+}
+
+*::selection {
+    background-color: rgb(30,30,30);
+    color: red;
+}
+
+/* div::backdrop {
+    color:red;
+    margin: 10px;
+    border: black solid thick;
+} */
+
+textarea {
+    width: 500px;
+}
+
+/* NO BROWSER SUPPORT */
+::spelling-error {
+    text-decoration: wavy blue;
+    color: red;
+}
+
+/* NO BROWSER SUPPORT */
+::grammar-error {
+    text-decoration-line: line-through;
+    color: red;
+    }
+
+    ::placeholder {
+        color: rgb(255,122,122);
+        font-style: italic;
+    }
+
+    ::marker {
+        color:red;
+        font-size: x-large;
+    }

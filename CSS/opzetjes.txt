@@ -1,0 +1,9 @@
+There are currently seven pseudo-elements in CSS. They are:
+
+::after
+::before
+::first-letter
+::first-line
+::marker
+::placeholder
+::selection
