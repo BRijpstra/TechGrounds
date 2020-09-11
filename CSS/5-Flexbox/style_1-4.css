@@ -1,0 +1,46 @@
+.container {
+    display: inline-flex;
+    background: rgb(255,255,140);
+    padding: 1.5px;
+    /* justify-content: space-between; */
+    width: 550px;
+    margin: 10px;
+    border: 1px black solid;
+}
+
+.square {
+    padding: 3px 27px;
+    margin: 1.5px;
+    background-color: rgba(50,50,50,0.3);
+}
+
+.twee {
+    justify-content: flex-end;
+}
+
+.drie {
+    align-content: stretch;
+}
+
+.square2 {
+    flex-basis: 200%;
+    padding: 3px 27px;
+    margin: 1.5px;
+    background-color: rgba(50,50,50,0.3);
+}
+
+.just1 {
+    justify-content: space-between;
+}
+
+.just2 {
+    justify-content: space-evenly ;
+}
+
+.just3 {
+    justify-content: space-around;
+}
+
+.just4 {
+    justify-content: center ;
+}

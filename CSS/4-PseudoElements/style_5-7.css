@@ -1,0 +1,83 @@
+.yoda {
+    border: 1px solid black;
+    height: 315px;
+    width: 700px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: justify;
+    position: relative;
+    overflow: hidden;
+    }
+
+.yoda::before {
+    content: url("yoda.png");
+    position: absolute;
+    top: -200px;
+    left: 130px;
+    z-index: -1;
+    opacity: 30%;    
+}
+
+.fig1 {
+    color: white;
+    height: 75px;
+    width: 75px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 0px 15px;
+}
+
+h1::before {
+    content: "˙";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: -11px;
+    border-radius: 50%;
+    border-width: 0px;
+    background-color: black;
+    font-size: smaller;
+    display: inline-block;
+}
+
+h1::after {
+    content: ".";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 57px;
+    border-radius: 50%;
+    background-color: black;
+    font-size: smaller;
+    display: inline-block;
+}
+
+.star {
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+    background-color: red;
+    position: relative;
+    /* transform: rotate(30deg); */
+}
+
+.star::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: red;
+    transform: rotate(30deg);
+}
+
+.star::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: red;
+    transform: rotate(60deg);
+}
