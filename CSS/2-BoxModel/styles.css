@@ -1,0 +1,42 @@
+div   {
+    background-color: lightgreen;
+}
+
+p {
+    background-color: green;
+}
+
+span {
+    background-color: white;
+/*    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+*/
+    }
+
+.padded {
+    padding: 10px;
+}
+
+.margin {
+    margin: 15px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    border: 5px solid black;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    margin-left: 130px;
+    padding: 5px;
+    border: 5px dotted black;
+    box-sizing: border-box;
+}

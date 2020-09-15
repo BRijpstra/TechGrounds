@@ -1,0 +1,49 @@
+.container {
+    background-color: rgb(234, 252, 168);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    height: 420px;
+    width: 750px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h2 {
+    color: rgb(234, 252, 168);
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding: 2px 8px;
+    background-color: black;
+    max-width: fit-content;
+}
+
+.item { 
+    margin: 3px;
+    background-color: rgb(147, 79, 224);
+    flex-grow: 0;
+    color: rgb(147, 79, 224);
+    }
+    
+.een {
+    padding: 0px 320px;
+}    
+.twee {
+    padding: 0px 150px;
+}
+
+.drie {
+    padding: 0px 180px;
+}    
+.vier {
+    padding: 0px 210px;
+}
+
+.vijf {
+    padding: 0px 90px;
+}    
+.zes {
+    padding: 0px 120px;
+}
+

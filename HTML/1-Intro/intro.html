@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Introductie Opdrachten</title>
+</head>
+<body>
+    <h1>HTML INTRODUCTIE</h1>
+
+<!--1.1: Wat is het verschil tussen het internet en het world wide web?
+    Internet is de verbinding tussen verschillende servers, computers en apparaten (enorm openbaar netwerk). Om toegang te krijgen tot the World Wide Web heb je internet nodig. 
+    WWW is een set afspraken over web-protocollen, zoals het gebruik van URLs, HTTP en HTML.
+
+1.2: Wat is het verschil tussen HTML, CSS en JavaScript?
+    HTML: de standaard opmaaktaal voor webpagina's waar de inhoud kan worden toegevoegd.
+    CSS: de taal die we gebruiken om een ​​HTML-document op te maken en de layout van een webpagina te specificeren.
+    Javascript: een programmeertaal om het gedrag van webpagina’s aan te passen en meer levendig en interactief te maken.
+
+1.3: Wat is een HTML tag en een HTML element? 
+    HTML tags worden gebruikt om elementen te beginnen en te eindigen. Elementen zijn onderdeel van een HTML bestand in een browser.
+    <h1>Dit</h1> zijn de opening en closing tags van het h1 element, wat een header maakt van het woordje 'dit.'
+
+1.4: HTML gebruikt basis tags om structuur op te bouwen:
+    <html> het top-level (of root) element waar alle andere elementen in zitten
+    <head> het element waarin alle metadata van de pagina zit, veelal voor zoekmachines maar ook voor de titel, Javascript en/of CSS.
+    <body> het element waarin alle content van de pagina zit.
+    
+1.5: Op HTML elementen kun je attributen gebruiken:    
+    Attributen bevatten informatie over het betreffende element en zijn altijd gespecificeerd in de opening tag. Laten we als voorbeeld een IMG tag bekijken:
+        <img src="img/gember_thee.jpg" alt="gember thee" width="100" class="voorbeeld" id="gember1">
+    - src; voor het aangeven van de locatie van het plaatje
+    - alt; de tekst die bij mouse-over bij het plaatje verschijnt
+    - width; om de breedte van het plaatje aan te passen.
+    - class; voor het aanmaken van classificaties voor je elementen, zodat je ze als groep kunt aanspreken
+    - id; om het element een ID / naam te geven, zodat je  bv in de css het element makkelijk kunt aanspreken
+
+1.6: Waarom is een goede HTML Structuur belangrijk? 
+    Goede HTML structuur is belangrijk om je pagina overzichtelijk en leesbaar te houden, en om je als developper grip te geven op de content.
+    De gelinkte code heeft geen structuur naast de html structuur. Geen tags, geen formatting, geen lay-out: Een lange aaneengesloten lap tekst zal het resultaat zijn.
+
+1.7: Wat is het verschil tussen inline en block elementen?
+    Een block element begint altijd op een nieuwe regel en neemt de hele breedte in beslag. 
+    Het kan gaan om één regel of meerdere regels. Een inline element start niet op een nieuwe regel en bestaat maar uit één regel.
+
+1.8: Wat betekent nesting? Codeer een voorbeeld met nesting erin.
+    Nesting betekent dat je het ene element 'nestelt' binnen een ander element. Dit kan je gebruiken om een paar elementen bij elkaar te groeperen, zoals bij div containers, om overzicht / structuur in je content aan te brengen. 
+    Je kunt naar de relatie van de elementen kijken als parent-child; bepaalde eigenschappen worden automatisch overgenomen door de 'kinderen'. 
+    Zowel inline elementen als block elementen kunnen genest worden, en de block elementen kunnen ook meerdere lagen diep genesteld worden. Er dient dan wel goed opgelet te worden wat waar wordt geopend of gesloten, want hoe meer lagen, hoe minder overzichtelijk de html structuur te lezen is. Zie de html pagina voor een voorbeeld van 3 lagen diepe nesteling.
+-->
+
+<h2>1.8 - Nested content</h2>
+<div class="container" style="border: solid black">
+    <div class="block" style="border: solid red">
+        <p>This is example content, nested in the outer, black, container.</p>
+       <br>
+        <div class="inner-block" style="border: solid blue">
+            <p>This is content that is nested in the red box, which was nested in the black box</p>
+        </div>
+    </div>
+    <br>
+    <div class="block" style="border: solid red">
+        <p>The content over here is also nested 1 layer deep within the black container.</p>
+        <div class="inner-block" style="border: solid blue">
+            <p>This is one layer deeper, so nested two layers deep in the outer-container</p>
+        </div>
+    </div>
+</div>
+
+<!--1.9: Sinds de komst van HTML5 zijn er elementen die betekenissen hebben. Wat wordt er bedoeld met HTML semantics? 
+    Semantiek verwijst naar de juiste interpretatie van de betekenis van een woord of zin. Met HTML semantics wordt bedoeld dat HTML-elementen al enige informatie overbrengen over het type inhoud dat zich tussen de openende en sluitende tags bevindt. Door correct gebruik te maken van semantics is de opmaak zowel door mensen als machinaal leesbaar.
+
+1.10: Wat voor content zou je in de volgende elementen gebruiken?
+    ●<header>   Het 'hoofd' van een pagina, met daar vaak het logo van de site en een navigatie menu
+    ●<footer>   De 'voeten' van je structuur-> het onderste gedeelte van een pagina, met bv contact informatie, copyright...
+    ●<main>     Het kerngedeelte van een pagina, zoals de producten, prijs en omschrijving bij een webshop   
+    ●<nav>      een navigatie menu of systeem, voor links binnen de pagina of naar andere pagina's binnen de site
+    ●<section>  Om je pagina in enkele topics te verdelen. Bijvoorbeeld 1 sectie met alles over theesoorten, 1 sectie over locaties, 1 sectie over het brouwproces
+    ●<aside>    Voor het aangeven van wat extra informatie, die eigenlijk niet nodig is voor de betreffende content. Denk aan een leuk weetje over een gebouw, of korte uitleg waaraan een relatief onbekend begrip refereert.
+    ●<article>  Geeft aan dat dit groepje onafhankelijke, vrijstaande informatie bevat. In andere woorden vormt dit groepje een artikel.
+
+1.11: Onderzoek en leg uit waarom headers zowel belangrijk zijn voor zoekmachines als voor de gebruikers:
+    Headers trekken de aandacht van de gebruiker en het kondigt de pagina inhoud aan.
+    Heading tags zijn belangrijk voor zoekmachines om de informatie te indexeren.
+    Een goed passende header is helder voor lezers en helpt tegelijkertijd mensen je pagina te vinden.
+
+    1.12: Onderzoek hoe je een text-header aanmaakt: 
+-->
+
+    <h1>1.12 - Headings opdrachten</h1>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+<!-- 1.13: Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt. Geef hier een voorbeeld bij. --->
+    <p>1.13 - Paragraph tags worden gebruikt om een of meerdere zinnen in 1 paragraaf te zetten, zonder linebreaks ertussen.<p>
+
+<!-- 1.14: Onderzoek en leg het verschil uit tussen het stoppen van alle tekst in één paragraaf tag,en het opsplitsen van de tekst in meerdere tags: -->
+    <p>1.14 - Een enkele paragraaf gaat idealiter over 1 bepaalde gedachtengang, en is mooi overzichtelijk. Tot enkele regels valt mooi te behappen</p>
+    <p>Maar een daaropvolgende conclusie kan beter worden ingeleid met een regeltje rust, om vervolgens dus met verse tag in een nieuwe paragraaf gezet te worden.</p>
+
+    <h1>1.15 - Mijn eerste website</h1>
+    <h2>Mijn eerste sub-kopje</h2>
+    <p>Lorem ipsum DimSum etceterum...</p>
+    <h2> Mijn tweede sub-kop</h2>
+    <p>Lorem Ipsum paragraaf unus</p>
+    <p>Lorem Ipsum paragraaf duo</p>
+    <hr>
+    <footer>
+        <h1>Footer (1.16) met link (1.17 + 1.18)</h1>
+
+<!--1.18: Onderzoek naar 4 attributen die een link tag kan hebben:
+    href = locatie van de links
+    target = waar wordt de link geopend, zelfde tab, nieuwe tab of > blank window
+    rel = relatie tussen pagina waarop je bent en de link
+    referrerpolicy = of de gelinkte pagina te horen krijgt waar de gebruiker vandaan komt (zoekmachine, facebook, etc)(voor voorbeeld zie boven) -->
+
+    <p>Deze pagina is gebouwd door een waanzinnig getalenteerd groepje van de <a href="http://www.techgrounds.nl"target="blank" rel="external">TechGrounds Academy</a></p>
+    </footer>
+</body>
+</html>

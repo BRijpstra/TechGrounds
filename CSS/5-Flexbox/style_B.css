@@ -1,0 +1,56 @@
+.container {
+    background-color: rgb(156, 196, 241);
+    border: 2px solid black;
+    display: inline-flex;
+    margin: 0px 10px;
+    height: 250px;
+    max-width: fit-content;
+}
+
+h2 {
+    color: rgb(92, 95, 250);
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding: 2px 8px;
+    background-color: black;
+    max-width: fit-content;
+    
+}
+
+.item { 
+    margin: 4px;
+    background-color: rgba(50,50,50,0.3);
+    padding: 20px 40px;
+    text-decoration-line: underline;
+  }
+  
+.item:nth-child(even) {
+    padding-bottom: 70px;
+    padding-top: 5px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.item:nth-child(3) {
+    padding: 80px 40px;
+}
+
+.fstart {
+    align-items: flex-start;
+}
+
+.fend {
+    align-items: flex-end;
+}
+
+.fstretch {
+    align-items: stretch;
+}
+
+.fcenter {
+    align-items: center;
+}
+
+.fbaseline {
+    align-items: baseline;
+}

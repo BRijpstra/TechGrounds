@@ -1,0 +1,132 @@
+h1 {
+    color: grey;
+    transition: color 1s ease-in-out;
+}
+
+h1:hover {
+    color: blue
+}
+
+.container {
+    width: 810px;
+    height: fit-content;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin: 5px;
+    transition-duration: 2s;}
+
+h3 { margin-top: 40%;}
+
+.container:hover .een {
+    transition: background-color 1s, border-radius 2s, transform 2.5s;
+    transition-timing-function: ease-out;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(700px,0);
+}
+.container:hover .twee {
+    transition: background-color 3s, border-radius 2s, transform 2.5s;
+    transition-timing-function: ease-in;
+    background-color: orangered;
+    border-radius: 10%;
+    transform: translate(700px,0);
+}
+.container:hover .drie {
+    transition: background-color 1s, transform 2.5s;
+    transition-timing-function: linear;
+    background-color: orange;
+    transform: translate(700px,0);
+}
+.container:hover .vier {
+    transition: background-color 1s, transform 2s;
+    transition-timing-function: cubic-bezier(1, 1, 1, 1);
+    transition-delay: 0.5s;
+    background-color: yellow;
+    transform: translate(700px,0);
+}
+.container:hover .vijf {
+    transition: transform 4s linear 0s, margin-left 1s ease 1s;
+    transform: translate(1000px,0);
+    margin-left: -295px;
+}
+/*-------------------------------------------------*/
+
+.container4 {
+    height: 500px;
+    width: 500px;
+    background-color: rgb(190,190,190);
+    position: relative;
+}
+h3 { margin-top: 40%;}
+
+.boxje {
+    text-align: center;
+    border: 1px solid black;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    transition-property: left, right, top, bottom;
+    transition-duration: 1s, 1s, 1s, 1s;
+    /* transition-timing-function: ease; */
+    transition-delay: 0s,1s,2s,3s;
+}
+
+.container4 .zes {left: 40%; top: 45%;}
+.container4 .zeven {left: 40%; bottom: 45%;}
+.container4 .acht {right: 50%; top: 45%;}
+
+.container4:hover .zes {
+    left: 0;
+    top: 0;
+}
+
+.container4:hover .zeven {
+    left: 0;
+    bottom: 0;
+}
+
+.container4:hover .acht {
+    right: 0;
+    top: 0;
+}
+/*-------------------------------*/
+
+.container5 {
+    height: 600px;
+    width: 600px;
+    border: 1px solid black;
+    position: relative;
+    transition: position 2s;
+    /* transition-delay: 0s, 0s, 1.5s; */
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 210px;
+    object-fit: scale-down;
+}
+
+.cover {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    width: 210px;
+    height: 215px;
+    opacity: 100%;
+    border: 5px solid red;
+}
+
+.container5:hover .cover {
+    left:100px;
+
+}

@@ -1,0 +1,48 @@
+
+
+/* type selector */
+h1 {
+    color: darkred;
+}
+
+/* class selector */
+.colortext {
+    color: blue;
+}
+
+/*id selector */
+#darkgold {
+    color: darkgoldenrod;
+}
+
+/*attribute selector */
+a[target] {
+    background-color: grey;
+}
+
+/* Descendant combinator */
+article code {
+    font-size: x-large;
+}
+
+/* Child combinator */
+div > h1 {
+    font-style: italic;
+}
+
+/* Adjacent sibling */
+code + div {
+    background-color: lightblue;
+}
+
+/* general sibling */
+code ~ span {
+    background-color: red;
+}
+
+/* universal selector */
+
+div * {
+    text-align: justify;
+}
+

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Formulieren en tabellen</title>
+</head>
+
+<body>
+<!--3.1: Maak een HTML form waarbij de gebruiker zijn naam en achternaam in kan vullen. -->
+    <h1>3. Formulieren en tabellen</h1>
+    <h3>3.1 - Basic HTML formulier</h3>
+    <form action="mailto:info@TechGrounds.nl" method="POST" enctype="text/plain">
+        <label>Voornaam: </label>
+        <input type="text" name="voornaam"><br>
+        <label>Achternaam: </label>
+        <input type="text" name="achternaam"><br>
+        <input type="submit">
+    </form> <br>
+
+<!-- Opdracht 3.2 & 3.3-->
+    <fieldset style="width:600px">
+        <legend>Opdracht 3.2 & 3.3</legend>
+        <h2>Form Inputs </h2>
+        <form action="mailto:info@techgrounds.nl" method="POST" enctype="text/plain">
+            <label>Voornaam: </label>
+            <input type="text" name="Voornaam"><br><br>
+            <label>Achternaam: </label>
+            <input type="text" name="Achternaam"><br><br>
+            <label>Wenst u A, B of C?</label><br>
+            <input type="radio" id="A" name="keuze" value="A"> <label for="A">Keuze A</label><br>
+            <input type="radio" id="B" name="keuze" value="B"> <label for="B">Keuze B</label><br>
+            <input type="radio" id="C" name="keuze" value="C"> <label for="C">Keuze C</label><br><br>
+            <label>Heb je dit gelezen?</label>
+            <input type="checkbox" name="checkbox"> <br>
+            <label>Datum Picker:</label>
+            <input type="date" name="date"><br>
+            <label>Tijd Selector:</label>
+            <input type="time" name="time"> <br>
+            <label>Zoeken: </label>
+            <input type="search" name="search"> <br>
+            <label>Hier staat niets hoor...</label>
+            <input type="hidden" name="hidden" value="hiddenvalue"> <br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd"><br>
+            <label>Email:</label>
+            <input type="email" name="email"> <br><br>
+            <input type="submit">
+            <input type="reset" value="Reset">
+        </form>
+    </fieldset><br>
+
+<!--Opdracht 3.4-->
+    <form action="mailto:inf" method="POST" enctype="text/plain">
+        <fieldset style="width:600px">
+            <legend>Opdracht 3.4</legend>
+            <h2>Persoons gegevens</h2>
+            <p>
+                <label>Achternaam: </label>
+                <input type="text" name="Achternaam">
+            </p>
+            <p>
+                <label>Voornaam: </label>
+                <input type="text" name="Voornaam">
+            </p>
+            <p>
+                <label>Geboortedatum:</label>
+                <input type="date" name="date">
+            </p>
+            <p>
+                <label>M: </label>
+                <input type="radio" id="M" name="gender" value="A">
+                <label>V: </label>
+                <input type="radio" id="V" name="gender" value="B">
+            </p>
+            <p>
+                <label>Postcode: </label>
+                <input type="text" name="Postcode">
+            </p>
+            <p>
+                <label>Adres: </label>
+                <input type="text" name="Adres">
+            </p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset"><br>
+        </fieldset><br>
+        
+<!--Opdracht 3.5-->
+        <fieldset style="width:600px">
+            <legend>Opdracht 3.5</legend>
+            <form action="/action_page.php">
+                <label for="dropdown">dit is een:</label>
+                <select name="dropdown" id="list">
+                    <option value="drop">drop</option>
+                    <option value="down">down</option>
+                    <option value="list">list</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </fieldset><br>
+
+<!--3.6: We hebben nu geleerd hoe je dropdown list, radio buttons en checkboxes maakt:
+    Dropdown list: Bij het inschrijven voor een opleiding. Om de juiste onderwijsinstelling te selecteren kan gebruik worden gemaakt van deze optie.
+    Radio buttons: Bij het aangeven van het geslacht. Daarbij zijn er meestal drie opties: man, vrouw of anders.
+    Checkboxes: Bij het invullen van een lijst met symptomen is het handig om meerdere opties aan te kruisen.
+
+3.7-->
+    <form action="mailto:info@techgrounds.nl" method="POST" enctype="text/plain">
+        <fieldset style="width:600px">
+            <legend>Opdracht 3.7</legend>
+                <h2>Sport Reservering </h2>
+                <label>Voornaam:</label><br>
+                <input type="text" name="Voornaam"><br>
+                <label>Achternaam: </label><br>
+                <input type="text" name="Achternaam"><br>
+                <label>Email:</label><br>
+                <input type="email" name="email"> <br><br>
+                <label>Bent u al lid?</label><br>
+                <input type="radio" id="ja" name="keuze" value="ja"> <label for="ja">ja</label><br>
+                <input type="radio" id="keuze" name="keuze" value="nee"> <label for="nee">nee</label><br>
+                <br><label for="reserve">Sport</label>
+                <select name="sport" id="sport">
+                    <option value="tennis">tafeltennis</option>
+                    <option value="badminton">badminton</option>
+                    <option value="squash">squash</option>
+                </select>
+                <br><br>
+                <label>Datum:</label>
+                <input type="date" name="date"><br>
+                <label>Tijd:</label>
+                <input type="time" name="time"> <br>
+                <label>Gaat u akkoord?</label>
+                <input type="checkbox" name="checkbox"><br>
+                <input type="hidden" name="hidden" value="hiddenvalue"><br>
+                <input type="submit">
+        </fieldset>
+        </form><br>
+
+<!--Opdracht 3.8-->
+        <form action="/action_page.php">
+            <fieldset style="width:800px">
+                <legend>Opdracht 3.8</legend>
+                <h2>Reserveringsformulier</h2>
+                <p>Voor het reserveren van een boek, hebben wij de volgende gegevens nodig. Alvast veel leesplezier!</p>
+                <label for="name">Naam:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="telnr">Telefoonnummer:</label><br>
+                <input type="text" id="telnr" name="telnr" value=+316><br>
+                <label for="mail">E-mail:</label><br>
+                <input type="text" id="mail" name="mail" <br><br>
+                <label for="boek">Naam van boek:</label><br>
+                <input type="text" id="boek" name="boek"><br><br>
+                <label for="dropdown">Aantal boeken:</label>
+                <select name="dropdown" id="list">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form><br>
+
+<!-- Opdracht 3.9 -->
+        <form action="action_page.php">
+            <fieldset style="width:600px">
+                <legend>Opdracht 3.9</legend>
+                <h2>Evaluatie Formulier</h2>
+                <h3>Onderwerp</h3>
+                <input type="text" />
+                <h3>Coach</h3>
+                <input type="text" />
+                <h4>Geef je mening over de volgende stellingen:</h4>
+                <div>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Sterk Oneens</th>
+                            <th>Oneens</th>
+                            <th>Neutraal</th>
+                            <th>Eens</th>
+                            <th>Sterk Eens</th>
+                        </tr>
+                        <tr>
+                            <td>1. De coach was vakbekwaam en was goed in staat materie over te brengen.</td>
+                            <td><input type="radio" value="none" name="bekwaam" /></td>
+                            <td><input type="radio" value="none" name="bekwaam" /></td>
+                            <td><input type="radio" value="none" name="bekwaam" /></td>
+                            <td><input type="radio" value="none" name="bekwaam" /></td>
+                            <td><input type="radio" value="none" name="bekwaam" /></td>
+                        </tr>
+                        <tr>
+                            <td>2. De coach heeft voldoende individuele aandacht gegeven.</td>
+                            <td><input type="radio" value="none" name="aandacht" /></td>
+                            <td><input type="radio" value="none" name="aandacht" /></td>
+                            <td><input type="radio" value="none" name="aandacht" /></td>
+                            <td><input type="radio" value="none" name="aandacht" /></td>
+                            <td><input type="radio" value="none" name="aandacht" /></td>
+                        </tr>
+                        <tr>
+                            <td>3. De coach was altijd goed voorbereid en georganiseerd</td>
+                            <td><input type="radio" value="none" name="voorbereid" /></td>
+                            <td><input type="radio" value="none" name="voorbereid" /></td>
+                            <td><input type="radio" value="none" name="voorbereid" /></td>
+                            <td><input type="radio" value="none" name="voorbereid" /></td>
+                            <td><input type="radio" value="none" name="voorbereid" /></td>
+                        </tr>
+                        <tr>
+                            <td>4. Het gebruikte lesmateriaal was duidelijk en prettig leesbaar</td>
+                            <td><input type="radio" value="none" name="leesbaar" /></td>
+                            <td><input type="radio" value="none" name="leesbaar" /></td>
+                            <td><input type="radio" value="none" name="leesbaar" /></td>
+                            <td><input type="radio" value="none" name="leesbaar" /></td>
+                            <td><input type="radio" value="none" name="leesbaar" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>Overige Feedback & Suggesties:</h4>
+                <textarea rows="5"></textarea><br>
+                <button type="submit" href="/">Send</button>
+            </fieldset>
+        </form>
+
+<!---3.10 Om een tabel te maken heb je volgende elementen nodig. Geef voor elke element een definitie:
+    <table> Als je veel verschillende data-points van verschillende onderwerpen overzichtelijk bij elkaar wilt brengen, kan die informatie overzichtelijk in een tabel. De tabel tag groepeert deze info. 
+    <td> Table cell; een enkele cell binnen een tabel, dus de kleinste eenheid
+    <tr> Table row; (start van een) nieuwe rij binnen je tabel
+    <thead> Table Head element; groepeert header content van een tabel
+    <th> Table heading; Voor het maken tot heading van een cel (en dus bijbehorende kolom), voor het aangeven van wat voor data er in die kolom staat.
+    <tbody> Table Body element; groepeert alle 'core' data van een tabel.
+    <tfoot> Table footer; voor het aangeven van de footer van een tabel, dus de onderste rij, die bijvoorbeeld een optelsom van bovenstaande getallen kan bevatten.
+-->
+
+<!--Opdracht 3.11-->
+    <h1>HTML Tabellen</h1>
+    <table style="border: dotted grey">
+<thead>
+    <tr>
+        <th>Voornaam</th>
+        <th>Achternaam</th>
+        <th>Leeftijd</th>
+        <th>Telefoonnr</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>41</td>
+        <td>+31 12345678</td>
+    </tr>
+    <tr>
+        <td>Steven</td>
+        <td>Smith</td>
+        <td>32</td>
+        <td>+31 12345678</td>
+    </tr>
+    <tr>
+        <td>Alexander</td>
+        <td>Beave</td>
+        <td>16</td>
+        <td>+31 12345678</td>
+    </tr>
+</tbody>
+</table><br>
+
+<!--Opdracht 3.12-->
+<table style="border: solid grey">
+<thead>
+    <tr>
+        <th>MA</th>
+        <th>DI</th>
+        <th>WO</th>
+        <th>DO</th>
+        <th>VR</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Afspraak met tandarts</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Sporten</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Huiswerk maken</td>
+        <td>Werken</td>
+        <td>Werken</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Afspraak met tandarts</td>
+        <td></td>
+        <td></td>
+        <td>Werken</td>
+        <td>Bij vrienden</td>
+    </tr>
+</tbody>
+</table><br>
+
+<!--Opdracht 3.13-->
+<table style="border: dashed grey">
+<thead>
+    <tr>
+        <th></th>
+        <th>Sport</th>
+        <th>Aantal recreanten</th>
+        <th>Aantal competitie spelers</th>
+        <th>Totale deelnemers</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td rowspan="3">Racket sport</td>
+        <td>Badminton</td>
+        <td>10</td>
+        <td>30</td>
+        <td>40</td>
+    </tr>
+    <tr>
+        <td>Tafeltennis</td>
+        <td>59</td>
+        <td>30</td>
+        <td>89</td>
+    </tr>
+    <tr>
+        <td>Tennis</td>
+        <td>59</td>
+        <td>130</td>
+        <td>189</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Ball sport</td>
+        <td>Voetbal</td>
+        <td>88</td>
+        <td>40</td>
+        <td>128</td>
+    </tr>
+    <tr>
+        <td>Basketbal</td>
+        <td>60</td>
+        <td>40</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>Volleybal</td>
+        <td>35</td>
+        <td>20</td>
+        <td>55</td>
+    </tr>
+</tbody>
+</table><br>
+
+<!--Opdracht 3.14-->
+<table>
+<thead>
+    <tr>
+        <th>Groep</th>
+        <th colspan="4">Leden</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>Mandy</td>
+        <td>Nanayaa</td>
+        <td>Halilurraham</td>
+        <td>Hoisan</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Riga</td>
+        <td>Francis</td>
+        <td>Abraham</td>
+        <td>Floor</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Jouke</td>
+        <td>Sunny</td>
+        <td>Imani</td>
+        <td>Sanae</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Berend</td>
+        <td>Jens</td>
+        <td>Mari</td>
+        <td>Saloua</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Irene</td>
+        <td>Daniel</td>
+        <td>Kacem</td>
+        <td>Kristoffer</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Hyacinthia</td>
+        <td>Borja</td>
+        <td>Michael</td>
+        <td>Mohamed</td>
+    </tr>
+</tbody>
+</table>    
+</body>
+</html>
