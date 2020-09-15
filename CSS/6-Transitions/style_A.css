@@ -1,6 +1,6 @@
 h1 {
     color: grey;
-    transition: color 1s ease-in-out;
+    transition: color 0.5s ease-in-out;
 }
 
 h1:hover {
@@ -55,7 +55,7 @@ h3 { margin-top: 40%;}
     transform: translate(1000px,0);
     margin-left: -295px;
 }
-/*-------------------------------------------------*/
+/*-----------------------------------------------------------*/
 
 .container4 {
     height: 500px;
@@ -95,38 +95,69 @@ h3 { margin-top: 40%;}
     right: 0;
     top: 0;
 }
-/*-------------------------------*/
+/*--------------------------------------------------------------*/
 
 .container5 {
-    height: 600px;
-    width: 600px;
-    border: 1px solid black;
     position: relative;
-    transition: position 2s;
-    /* transition-delay: 0s, 0s, 1.5s; */
-}
+    height: 430px;
+    width: 430px;
+    border: 1px solid black;
+    background-image: radial-gradient(rgb(41, 40, 40), darkgrey, black);
 
+}
 img {
     position: absolute;
     top: 0;
     left: 0;
     width: 210px;
-    object-fit: scale-down;
 }
-
 .cover {
     position: absolute;
-    box-sizing: border-box;
     top: 0;
     left: 0;
     background-color: grey;
-    width: 210px;
-    height: 215px;
+    width: 200px;
+    height: 205px;
     opacity: 100%;
     border: 5px solid red;
+    transition-property: left, top, transform;
+    transition-duration: 0.76s, 1s, 1s;
+    transition-delay: 0.24s, 0s, 0s;
+    transition-timing-function: ease-in;
 }
 
 .container5:hover .cover {
-    left:100px;
+    left:210px;
+    top: 205px;
+    transform: rotate(180deg);
+}
+/*------------------------------------------------------*/
 
+.carddeck { margin: 100px;}
+.content {
+    padding: 10px;
+    font-size: larger;
+    text-align: center;
+    text-shadow: rgb(20, 20, 20);}
+h4 { font-size: xx-large;}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    background-color: grey;
+    border-radius: 5%;
+    border: 2px solid rgb(188, 3, 3);
+    box-shadow: 4px 4px 10px black;
+    color: rgb(101, 101, 101);
+    display: inline-block; 
+    margin: 0px -50px;
+    transition: margin 1s, color 0.5s;
+}
+
+.card:hover {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    color: whitesmoke;
 }
