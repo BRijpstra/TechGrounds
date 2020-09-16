@@ -8,15 +8,16 @@ h1:hover {
 }
 
 .container {
-    width: 810px;
+    width: 760px;
     height: fit-content;
     border: 1px solid black;
     text-align: center;
+    background-color: lightblue;
 }
 
 .box {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     border: 1px solid black;
     margin: 5px;
     transition-duration: 2s;}
@@ -51,17 +52,19 @@ h3 { margin-top: 40%;}
     transform: translate(700px,0);
 }
 .container:hover .vijf {
-    transition: transform 4s linear 0s, margin-left 1s ease 1s;
-    transform: translate(1000px,0);
-    margin-left: -295px;
+    transition: background-color 1s, transform 4s cubic-bezier(0,2.12,1,-1.53) 0s;
+    transform: translate(700px,0);
+    background-color: lightgoldenrodyellow;
+
 }
-/*-----------------------------------------------------------*/
+/*---------------------------------------------*/
 
 .container4 {
     height: 500px;
     width: 500px;
     background-color: rgb(190,190,190);
     position: relative;
+    border: 2px dashed black
 }
 h3 { margin-top: 40%;}
 
@@ -101,9 +104,8 @@ h3 { margin-top: 40%;}
     position: relative;
     height: 430px;
     width: 430px;
-    border: 1px solid black;
+    border: 3px dotted black;
     background-image: radial-gradient(rgb(41, 40, 40), darkgrey, black);
-
 }
 img {
     position: absolute;
@@ -136,6 +138,7 @@ img {
 .carddeck { margin: 100px;}
 .content {
     padding: 10px;
+    
     font-size: larger;
     text-align: center;
     text-shadow: rgb(20, 20, 20);}
