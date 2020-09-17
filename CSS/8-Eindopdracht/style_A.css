@@ -52,7 +52,7 @@ a:hover { color: rgb(097, 135, 216);
 
 #HOME {
     display: flex;
-    margin-top: 63px;
+    margin-top: 60px;
     height: 400px;
     background-image: url(images/cooking.jpg);
     background-repeat: no-repeat;
@@ -62,8 +62,7 @@ a:hover { color: rgb(097, 135, 216);
 .cooking {
     width: 270px;
     padding: 10px;
-    margin: 5% 7vw;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.4);
     align-self: center;
     margin-left: 40vw;
 }
@@ -111,24 +110,29 @@ a:hover { color: rgb(097, 135, 216);
 /*---------------- Menu -------------------*/
 .container-menu {
     display: flex;
-    width: 95vw;
-    margin: 0 10px;
+    /* justify-content: center; */
+    /* width: 95vw; */
+    margin-left: 10px;
 }
 
 .container-menu img {
     object-fit: contain;
     align-self: flex-end;
+    width: 20%;
+
 }
 
 .menu-lijst {
     display: flex;
-    width: 80vw; 
+    position: relative;
+    /* width: 80%;  */
     flex-wrap: wrap;
     justify-content: space-around;
 }
 .menu-item {
-    flex: 1 0 25%;
+    flex: 2 0 25%;
     padding: 15px 20px;
+    font-size: large;
 }
 .menu-item p { font-size: 0.9em;}
 /*---------------- Footer ----------------*/
@@ -148,13 +152,37 @@ footer ul {
 }
 footer a{color: rgb(097, 135, 216)}
 
-/*  // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) { ... }
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) { ... }
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) { ... }
-    // Extra large devices (large desktops, 1200px and up)
-    @media (min-width: 1200px) { ... }
+/*------------- RESPONSIVENESS ---------------*/
 
-    Gutter width	30px (15px on each side of a column) */
+@media (max-width:576px){
+    nav {text-align: center;}
+    .cooking {margin-left: 0;}
+    .menu-lijst {
+        flex-direction: column;
+        align-content: center; }
+    .menu-lijst:before {
+        content: url("images/chef1.webp");
+        position: absolute;
+        bottom: -6px;
+        left: 55px;
+        z-index: -1; 
+        opacity: 35%; }
+    .chef { display: none; }
+}
+
+@media (min-width:576px) and (max-width:768px){
+    nav {text-align: center;}
+    .cooking {margin-left: 0;}
+    .display {
+        width: 320px;
+        flex: 0 0 51%;     }
+    .menu-item { flex: 0 0 30%;}
+    .chef { display: none;}
+    .menu-lijst { justify-content: center;     }
+    .menu-lijst:before {
+            content: url("images/chef1.webp");
+            position: absolute;
+            bottom: -6px;
+            z-index: -1; 
+            opacity: 35%; }
+}
