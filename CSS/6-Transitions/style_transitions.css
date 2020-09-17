@@ -1,0 +1,164 @@
+h1 {color: grey;
+    transition: color 0.3s ease-in; }
+h1:hover { color: red;}
+
+.container {
+    width: 760px;
+    height: fit-content;
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    margin: 5px;
+    transition-duration: 2s;}
+h3 { margin-top: 40%;}
+
+.container:hover .een {
+    transition: background-color 1s, border-radius 2s, transform 2.5s;
+    transition-timing-function: ease-out;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(700px,0);
+}
+.container:hover .twee {
+    transition: background-color 3s, border-radius 2s, transform 2.5s;
+    transition-timing-function: ease-in;
+    background-color: orangered;
+    border-radius: 10%;
+    transform: translate(700px,0);
+}
+.container:hover .drie {
+    transition: background-color 1s, transform 2.5s;
+    transition-timing-function: linear;
+    background-color: orange;
+    transform: translate(700px,0);
+}
+.container:hover .vier {
+    transition: background-color 1s, transform 2s;
+    transition-timing-function: cubic-bezier(1, 1, 1, 1);
+    transition-delay: 0.5s;
+    background-color: yellow;
+    transform: translate(700px,0);
+}
+.container:hover .vijf {
+    transition: background-color 1s, transform 4s cubic-bezier(0,2.12,1,-1.53) 0s;
+    transform: translate(700px,0);
+    background-color: lightgoldenrodyellow;
+
+}
+/*---------------------------------------------*/
+
+.container4 {
+    height: 500px;
+    width: 500px;
+    background-color: rgb(190,190,190);
+    position: relative;
+    border: 2px dashed black
+}
+h3 { margin-top: 40%;}
+
+.boxje {
+    text-align: center;
+    border: 1px solid black;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    transition-property: left, right, top, bottom;
+    transition-duration: 1s, 1s, 1s, 1s;
+    transition-delay: 0s,1s,2s,3s;
+}
+
+.container4 .zes {left: 40%; top: 45%;}
+.container4 .zeven {left: 40%; bottom: 45%;}
+.container4 .acht {right: 50%; top: 45%;}
+
+.container4:hover .zes {
+    left: 0;
+    top: 0;
+}
+.container4:hover .zeven {
+    left: 0;
+    bottom: 0;
+}
+.container4:hover .acht {
+    right: 0;
+    top: 0;
+}
+/*--------------------------------------------------------------*/
+
+.container5 {
+    position: relative;
+    height: 430px;
+    width: 430px;
+    border: 3px dotted black;
+    background-image: radial-gradient(rgb(41, 40, 40), darkgrey, black);
+}
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 210px;
+}
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    width: 200px;
+    height: 205px;
+    opacity: 100%;
+    border: 5px solid red;
+    transition-property: left, top, transform;
+    transition-duration: 0.76s, 1s, 1s;
+    transition-delay: 0.24s, 0s, 0s;
+    transition-timing-function: ease-in;
+}
+.container5:hover .cover {
+    left:210px;
+    top: 205px;
+    transform: rotate(180deg);
+}
+/*------------------------------------------------------*/
+
+.carddeck { 
+    margin: 50px;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    top: 0;
+    background-color: grey;
+    border-radius: 5%;
+    border: 2px solid rgb(188, 3, 3);
+    box-shadow: 3px 3px 8px black;
+    color: rgb(255, 255, 255);
+    transition: margin-left 0.5s, top 0.2s, color 0.5s;
+    transition-delay: 0.2s, 0s, 0.2s;
+    transition-timing-function: linear;
+}
+
+/*  Toen ik naar de animatie keek van de kaarten dacht ik: wow, ik weet niet hoe ik dat zou moeten doen, en heb met versimpelde versie genoegen genomen. Wat m'n blindspot was / is; het slimmer selecteren / oproepen van elementen: 
+- alle kaarten behalve de eerste via pseudo
+- alle siblings (broers en zussen) die erna volgen ~
+etc */
+
+.card:not(:first-child) { margin-left: -150px; }
+.card:hover + .card{ margin-left: 0px; }
+.card:hover { top: -10px; }
+.card:hover ~ .card { color: red; }
+
+.content {
+    padding: 10px;
+    font-size: larger;
+    text-align: center;}
+h4 { font-size: xx-large;}
