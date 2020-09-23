@@ -1,0 +1,21 @@
+.button {
+  background-color: blue;
+  color: magenta;
+}
+
+.button:hover {
+  background-color: lightblue;
+}
+
+.button:active {
+  color: aqua;
+}
+
+.button {
+  background-color: orange;
+}
+
+.button:hover {
+  background-color: yellow;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,25 @@
+.button {
+  background-color: black;
+  color: silver;
+  border: silver;
+}
+
+.button:hover {
+  background-color: #323232;
+  color: gold;
+}
+
+.colorChangingSquare {
+  background-color: black;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  width: 2em;
+  height: 2em;
+}
+
+.colorChangingSquare:hover {
+  background-color: mediumvioletred;
+}
+/*# sourceMappingURL=style.css.map */

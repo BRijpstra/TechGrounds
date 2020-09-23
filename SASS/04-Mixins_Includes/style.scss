@@ -1,0 +1,30 @@
+@mixin coolblack() {
+    background-color: black;
+    color: silver;
+    border: silver;
+        &:hover {
+            background-color: rgb(50,50,50);
+            color: gold;
+        }
+}
+
+@mixin colorfade($bgc1,$bgc2,$duur) {
+    background-color: $bgc1;
+    transition-property: background-color;
+    transition-duration: $duur;
+        &:hover {
+            background-color: $bgc2;
+        }
+}
+//--------------------------------------//
+.button {
+    @include coolblack();
+}
+
+.colorChangingSquare {
+    @include colorfade(black,mediumvioletred,2s);
+    width: 2em;
+    height: 2em;
+} 
+
+//-----//
