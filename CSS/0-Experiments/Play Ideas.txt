@@ -1,0 +1,6 @@
+<link rel="icon" type="image/png" href="/someimage.png" />
+You should use a regular expression here. If no tag found, look for "favicon.ico" in the site root directory. If nothing found, the site does not have a favicon.
+
+-----------
+
+Scroll parallax
