@@ -1,0 +1,93 @@
+@use 'variables';
+@use 'mixins';
+
+/*--------------- HOME ----------------*/
+
+#HOME {
+    display: flex;
+    margin-top: 60px;
+    height: 25em;
+    background-image: url(images/cooking.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+}
+
+/*--------- Populaire Gerechten -----------*/
+
+.container-pop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.display {
+    width: 320px;
+    margin: 20px;
+    img {
+        width: 320px;
+        border-radius: 50%;
+    }
+    @media (min-width:$mobile-sm) and (max-width:$mobile-md) {
+        flex: 0 0 51%; } 
+}
+
+.item-top { @include flex-to-sides; }
+.item-bottom { @include flex-to-right; }
+
+/*---------------- Menu -------------------*/
+
+.container-menu {
+    display: flex;
+    margin-left: 10px;
+
+    img {
+        object-fit: contain;
+        align-self: flex-end;
+        width: 20%;
+    }
+    .chef {
+        @media (max-width: $mobile-md) {
+            display: none; }
+    }
+}
+.menu-lijst {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+        @media (max-width: $mobile-md) {
+                &:before {
+                content: url("images/chef1.webp");
+                position: absolute;
+                bottom: -6px;
+                left: 55px;
+                z-index: -1; 
+                opacity: 35%; }
+            }
+        }
+}
+.menu-item {
+    flex: 2 0 25%;
+    padding: 15px 20px;
+    font-size: large;
+        p { font-size: 0.9em;}
+    @media (min-width:$mobile-sm) and (max-width:$mobile-md) {
+        flex: 0 0 30%; }
+}
+
+/*---------------- Footer ----------------*/
+
+footer {
+    background-color: $green;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;    
+    
+    p { font-size: 0.8em; }
+
+    ul {
+        list-style-type: none;
+        padding: 0px 0px;
+    }
+    a {color: $blue; }
+}

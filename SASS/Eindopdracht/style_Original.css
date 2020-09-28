@@ -1,163 +1,13 @@
-/*--------------- Algemeen ---------------*/
-body {
-    font-family: 'Oswald', sans-serif;
-    margin: 0;
-    background-color: rgb(184, 240, 184);
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lobster', cursive; 
-    font-weight: normal; 
-    margin: 2px 0px;}
 
-h1 {
-    font-size: 3em;
-    margin: 20px 5px;
-    text-align: center;
-}
-h2 {
-    font-size: 1.3em;
-}
 
-a  { text-decoration: none;
-    color: black;}
-p {margin: 0px 0px;}
 
-.color1 { color: rgb(097, 135, 216);}
-.color2 { color: rgb(143, 197, 143);}
-
-/*---------------- Navbar ----------------*/
-nav {
-    background-color: rgba(255,255,255,0.7);
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    width: 100%;
-    text-align: end;
-    }
-nav ul {
-    align-items: center;
-    list-style-type: none;
-    margin: 0px 5px;
-    }
-nav li {
-    display: inline-block;
-    padding: 18px 10px;
-    }
-
-a:hover { color: rgb(097, 135, 216);
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);  }
-
-/*--------------- HOME ----------------*/
-
-#HOME {
-    display: flex;
-    margin-top: 60px;
-    height: 25em;
-    background-image: url(images/cooking.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: center;
-}
-.cooking {
-    width: 270px;
-    padding: 10px;
-    background-color: rgba(0,0,0,0.4);
-    align-self: center;
-    margin-left: 40vw;
-}
-.cooking h1 { 
-    margin: 0;
-    text-align: left; }
-
-.button1 , .button2 {
-    display: inline-block;
-    padding: 4px 12px;
-    border: 1px white solid;
-    transition: background-color 0.5s;
-}
-.button1:hover {
-    background-color: rgb(143, 197, 143); }
-.button2:hover {
-    background-color: rgb(097, 135, 216); }
-
-/*--------- Populaire Gerechten -----------*/
-
-.container-pop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.display-item {
-    width: 320px;
-    margin: 20px;
-}
-.display-item img {
-    width: 320px;
-    border-radius: 50%;
-}
-.item-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.item-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-/*---------------- Menu -------------------*/
-
-.container-menu {
-    display: flex;
-    margin-left: 10px;
-}
-
-.container-menu img {
-    object-fit: contain;
-    align-self: flex-end;
-    width: 20%;
-}
-
-.menu-lijst {
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.menu-item {
-    flex: 2 0 25%;
-    padding: 15px 20px;
-    font-size: large;
-}
-.menu-item p { font-size: 0.9em;}
-
-/*---------------- Footer ----------------*/
-
-footer {
-    background-color: rgb(143, 197, 143);;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 30px;    
-}
-footer p {
-    font-size: 0.8em;
-}
-footer ul {
-    list-style-type: none;
-    padding: 0px 0px;
-}
-footer a{color: rgb(097, 135, 216)}
 
 /*------------- RESPONSIVENESS ---------------*/
 
 @media (max-width:576px){
-    nav {text-align: center;}
-    .cooking {margin-left: 0;}
-    .menu-lijst {
-        flex-direction: column;
-        align-content: center; }
+
+
+         
     .menu-lijst:before {
         content: url("images/chef1.webp");
         position: absolute;
@@ -165,18 +15,10 @@ footer a{color: rgb(097, 135, 216)}
         left: 55px;
         z-index: -1; 
         opacity: 35%; }
-    .chef { display: none; }
 }
 
 @media (min-width:576px) and (max-width:768px){
-    nav {text-align: center;}
-    .cooking {margin-left: 0;}
-    .display-item {
-        width: 320px;
-        flex: 0 0 51%;     }
-    .menu-item { flex: 0 0 30%;}
-    .chef { display: none;}
-    .menu-lijst { justify-content: center;     }
+    .menu-lijst { 
     .menu-lijst:before {
             content: url("images/chef1.webp");
             position: absolute;

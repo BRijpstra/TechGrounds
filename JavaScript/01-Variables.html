@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript I</title>
+</head>
+<body>
+    
+<script>
+// Opdracht 1 // 
+let getal1;
+console.log("getal1 = " + getal1);
+// Opdracht 2 //
+const getal2 = "18";
+console.log("getal2 = " + getal2);
+// Opdracht 3+4 //
+let getal3 = 3;
+console.log("getal3 = " + getal3);
+getal3 = "stom";
+console.log("getal3 = " + getal3);
+getal3 = 5;
+console.log("getal3 = " + getal3);
+
+// Opdracht 5 + 6
+let datatype=true;              console.log("datatype " + typeof datatype);
+let datatype2="true?";          console.log("datatype " + typeof datatype2);
+let datatype3=208;              console.log("datatype " + typeof datatype3);
+let datatype4=10n;              console.log("datatype " + typeof datatype4);
+let datatype5=Symbol('Yikes');  console.log("datatype " + typeof datatype5);
+
+// NUMBERS
+// Opdracht 7
+let value1=6;
+let value2=8;
+console.log("Opgeteld: " + (value1 + value2));
+console.log("Verschil: " + (value2-value1));
+console.log("Product: " + (value1*value2));
+console.log("Quotiënt: " + (value2/value1));
+
+// Opdracht 8
+console.log("3 + (5 * 10 / 2) = " + (3 + 5 * 10 / 2));
+
+// Opdracht 9
+let number = 3;
+number++;
+console.log("number++ " + number);
+number--;
+console.log("number-- " + number);
+const sum = number++ + 2;
+console.log("sum with 'number++' " + sum);
+let number2 = 3;
+const sum2 = ++number2 + 2;
+console.log("sum with '++number' " + sum2);
+
+// Opdracht 10
+let number3 = 3;
+number3 += 4;
+console.log(number3);
+// alternatief geschreven: console.log((number3 + 4));
+
+// Opdracht 11
+let number4 = 3;
+number4 += 4;
+number4 -= 2;
+number4 /= 5;
+number4 *= 4;
+console.log("Result of exercise 11: " + number4);
+
+// Opdracht 12
+let eersteNaam = "Voornaam";
+let tweedeNaam = "Achternaam";
+console.log(eersteNaam + " " + tweedeNaam);
+
+// opdracht 13
+let string1 = "3";
+let number5 = 3;
+let combinedText;
+combinedText = string1 + number5;
+console.log(combinedText);
+
+// Opdracht 14
+// You can use single quotes if you want to contain an element with double quotes
+console.log("Printing something with 'quotes'...");
+
+// Opdracht 15
+let text = "text";
+text += " modifications";
+console.log(text);
+text = text + " and variations";
+console.log(text);
+
+// Opdracht 16
+let text2 = "TechGrounds";
+let text3 = "is the place to be";
+console.log(text2);
+console.log(text2.charAt(5));           // 5e letter
+console.log(text2.concat(" " + text3)); // string concatenation
+console.log(text2.slice(4,10));         // vanaf char4 tot char10
+console.log(text3.split(" "));          // split into array by _
+console.log(text3.substr(7,5));         // vanaf de 7e letter 5 letters selecteren
+
+</script>
+
+</body>
+</html>
