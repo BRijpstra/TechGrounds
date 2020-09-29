@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Conditions 1 to 8</title>
+</head>
+<body>
+    <label>Enter a number:</label>
+    <input type="number" name="number" id="number">
+    <button id="btn" onclick="checkNumber()">Compare</button>
+    <br><br>
+    <div> <span id="label"></span> </div>
+    
+<script>
+    
+    //opdracht 1 + 2 + 3 + 4 + 5 + 7
+
+    function checkNumber(){
+        let number = document.getElementById('number').value;
+        // console.log(number);
+        if (number==3) {
+            document.getElementById('label').innerHTML = "The number you entered is equal to 3!"; }
+        else if (number >= 11) {
+            document.getElementById('label').innerHTML = "The number you entered is equal to or even greater than 11!"; }
+        else if (number > 4) {
+            document.getElementById('label').innerHTML = "The number you entered is larger than 4!"; }
+        else if (number < 3) {
+            document.getElementById('label').innerHTML = "The number you entered is smaller than 3!"; }
+        else {
+            document.getElementById('label').innerHTML = ""; }
+        }
+
+// Opdracht 6
+// != comparison is TRUE if value A is NOT equal to B. This comparison looks at the actual value of different datatypes
+// !== comparison is TRUE if value or datatype A is NOT equal to that of B.
+        console.log('8 != "5"? ' + (8 != "5"));
+        console.log('5 != "5"? ' + (5 != "5"));
+        console.log('5 !== "5"? ' + (5 !== "5"));
+
+// Opdracht 8
+// The strict equality comparison is the reverse of the "!==" comparison. "===" will return a boolean; 
+// true if the compared values are exactly the same, false if they differ in value or type.
+        console.log('1===1? ' + (1 === 1));
+        console.log('1==="1"? ' + (1 === "1"));
+        console.log(`"hello"==='hello'? ` + ("hello" === 'hello'));
+
+</script>
+</body>
+</html>

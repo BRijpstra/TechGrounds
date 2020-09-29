@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Conditions 9 to </title>
+</head>
+<body>
+    <label>Number please:</label>
+    <input type="number" name="number" id="number">
+    <button id="btn" onclick="checkNumber()">Compare!</button>
+    <br><br>
+    <div> <span id="label"></span> </div>
+    
+    <h1>Translate Months</h1>
+    <input type="number" name="nmbr" id="nmbr">
+    <button onclick="translateMonth()">translate</button>
+    <div id="translatedMonth"></div>
+
+    <h1>Translate Months (with Switch)</h1>
+    <input type="number" name="nrS" id="nrS"\>
+    <button onclick="switchMonth()">switch</button>
+    <div id="switchLabel"></div>
+
+<script>
+    
+//opdracht 9 + 10 + 11 + 12
+
+function checkNumber(){
+    let number = document.getElementById('number').value;
+        
+    if (number > 5 && number < 10) {
+        document.getElementById('label').innerHTML = "The entered number is between 5 and 10"; }
+    else if (number >= 13 && number <= 20) {
+        document.getElementById('label').innerHTML = "The entered number is 13, 20 or somewhere in between"; }
+    else if (number == 21 || number == 23) {
+        document.getElementById('label').innerHTML = "The entered number is 21 or 23"; }            
+    else if (number > 30 && number < 35 || number > 40 && number < 45) {
+        document.getElementById('label').innerHTML = "The entered number is 31, 32, 33, 34, 41, 42, 43 or 44!"; }        
+    }  
+
+// Opdracht 13
+
+function translateMonth() {
+    let nmbr = document.getElementById('nmbr').value;
+    if (nmbr == 1) { document.getElementById('translatedMonth').innerHTML = "January"; }
+    else if (nmbr == 2) { document.getElementById('translatedMonth').innerHTML = "February"; }
+    else if (nmbr == 3) { document.getElementById('translatedMonth').innerHTML = "March"; }
+    else if (nmbr == 4) { document.getElementById('translatedMonth').innerHTML = "April"; }
+    else if (nmbr == 5) { document.getElementById('translatedMonth').innerHTML = "May"; }
+    else if (nmbr == 6) { document.getElementById('translatedMonth').innerHTML = "June"; }
+    else if (nmbr == 7) { document.getElementById('translatedMonth').innerHTML = "July"; }
+    else if (nmbr == 8) { document.getElementById('translatedMonth').innerHTML = "August"; }
+    else if (nmbr == 9) { document.getElementById('translatedMonth').innerHTML = "September"; }
+    else if (nmbr == 10) { document.getElementById('translatedMonth').innerHTML = "October"; }
+    else if (nmbr == 11) { document.getElementById('translatedMonth').innerHTML = "November"; }
+    else if (nmbr == 12) { document.getElementById('translatedMonth').innerHTML = "December"; }
+}
+
+// Opdracht 14
+
+function switchMonth() 
+    {
+        let nrS = document.getElementById("nrS").value;
+        // console.log(nrS);
+        // console.log(typeof nrS);
+        switch (nrS) {
+        case "1": document.getElementById('switchLabel').innerHTML = "January"; break; 
+        case "2": document.getElementById('switchLabel').innerHTML = "February"; break;
+        case "3": document.getElementById('switchLabel').innerHTML = "March"; break; 
+        case "4": document.getElementById('switchLabel').innerHTML = "April"; break;
+        case "5": document.getElementById('switchLabel').innerHTML = "May"; break; 
+        case "6": document.getElementById('switchLabel').innerHTML = "June"; break;
+        case "7": document.getElementById('switchLabel').innerHTML = "July"; break; 
+        case "8": document.getElementById('switchLabel').innerHTML = "August"; break;
+        case "9": document.getElementById('switchLabel').innerHTML = "September"; break; 
+        case "10": document.getElementById('switchLabel').innerHTML = "October"; break;
+        case "11": document.getElementById('switchLabel').innerHTML = "November"; break; 
+        case "12": document.getElementById('switchLabel').innerHTML = "December"; break;    
+        default: document.getElementById('switchLabel').innerHTML = "Dude, how many months are there?! Try again!"; break;            
+    }
+}
+    
+    
+
+
+    // else if (nmbr == 2) { document.getElementById('translatedMonthSwitch').innerHTML = "February"; }
+    // else if (nmbr == 3) { document.getElementById('translatedMonthSwitch').innerHTML = "March"; }
+    // else if (nmbr == 4) { document.getElementById('translatedMonthSwitch').innerHTML = "April"; }
+    // else if (nmbr == 5) { document.getElementById('translatedMonthSwitch').innerHTML = "May"; }
+    // else if (nmbr == 6) { document.getElementById('translatedMonthSwitch').innerHTML = "June"; }
+    // else if (nmbr == 7) { document.getElementById('translatedMonthSwitch').innerHTML = "July"; }
+    // else if (nmbr == 8) { document.getElementById('translatedMonthSwitch').innerHTML = "August"; }
+    // else if (nmbr == 9) { document.getElementById('translatedMonthSwitch').innerHTML = "September"; }
+    // else if (nmbr == 10) { document.getElementById('translatedMonthSwitch').innerHTML = "October"; }
+    // else if (nmbr == 11) { document.getElementById('translatedMonthSwitch').innerHTML = "November"; }
+    // else if (nmbr == 12) { document.getElementById('translatedMonthSwitch').innerHTML = "December"; }
+
+</script>
+</body>
+</html>
