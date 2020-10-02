@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript| 5-7 | My first functions</title>
+</head>
+
+<body>
+
+    <h2>5A. Friend or Foe Checker:</h2>
+        <input type="text" name="name1" id="name1" placeholder="First Name">
+        <button id="btn" onclick="friendCheck()">Investigate!</button><br>
+        <span id="label"></span><br><br>
+    
+    <h2>6. The Assigned Friend. or foe?!</h2>        
+        <button id="btn2" onclick="assign()">assign</button>
+        <span id="label2"></span><br>
+    <button id="btn3" onclick="friendCheck2()">Check</button>
+    <span id="label3"></span>
+
+    <script>
+
+    // Opdracht 5 - Simple version
+    const friends = ["Kim", "Sohaib", "John", "Olly", "Mo", "Hendrik", "Tony"];
+    function friendCheck() {
+        name1 = document.getElementById('name1').value;
+            if (friends.includes(name1)) {
+                document.getElementById('label').innerHTML = "Yes, " + name1 + " is a friend!";
+            }
+            else {
+                document.getElementById('label').innerHTML = name1 + "??? What a weird name; not a friend!";
+        }   }
+
+    // Opdracht 6 - incl. random assigning a name + use of arrow functions
+    let assign = () =>{
+            const people = ["Kim", "Sohaib", "John", "Olly", "Mo", "Hendrik", "Tony", "Irus", "Jan", "Peter"];
+            assignedPerson = people[Math.round(Math.random() * 9)];
+            document.getElementById('label2').innerHTML = "Assigned: " + assignedPerson;
+        }
+    let friendCheck2 = () => {
+            if (friends.includes(assignedPerson)) {
+                document.getElementById('label3').innerHTML = "Friend; fun!";
+            }
+            else { document.getElementById('label3').innerHTML = "Stranger; danger!"; }
+        }
+        // Notes Sohaib mbt parameter meegeven: echt alleen doen als je die meegeeft, anders loopt t spaak. Waardes die je binnen je functies pas oproept, kan je (vaak) niet buiten je functie oproepen. truc is dan die variabelen voor de functie start vast te declareren //
+
+    </script>
+</body>
+
+</html>

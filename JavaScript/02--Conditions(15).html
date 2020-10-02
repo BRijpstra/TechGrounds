@@ -76,7 +76,7 @@ const​ ​words​ = [​"Together"​, ​"Teamwork"​, ​"Scrum"​, ​"I
 const​ ​guessingWord​ = ​words​[​Math​.​round​(​Math​.​random​() * (words.length - 1))];
 ​
 function​ ​guess​(​obj​) {
-    obj.children[1].innerHTML = 'just changed';
+    let choice = obj.children[1].innerHTML;
     console.log(obj.children[1].innerHTML);
     // 
     //conditions oproepen en checken of t gelijk is. Boolean result != ===
