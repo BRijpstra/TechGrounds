@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Arrays</title>
+</head>
+<body>
+ 
+<script>
+//   Opdracht 1: Maak een array met 10 getallen die willekeurig in een array staan. Print de array uit in jouw console.
+const numbers = [2,6,8,1,9,0,3,4,5,7];
+console.log(numbers);
+
+// Opdracht 2: Maak een array met 5 verschillende fruitsoorten. Print de array uit in jouw console.
+const fruit = ['pineapple', 'papaya', 'pear', 'plum', 'peach'];
+console.log(fruit);
+
+// opdracht 3: Op welke index staat “Passionfruit”?
+fruit.push("passionfruit", "pomegrenate");
+console.log(fruit[5]);
+
+// opdracht 4: Op welke index staat “pomegrenate”. Gebruik de index waarde om uit te printen   
+console.log(fruit[6]);
+
+// Opdracht 5: I: Haal een waarde uit de numbers array met de random methode, aangepast met de modulo ivm beperkt fruitsoorten < numbers
+
+let randomIndex = Math.floor(Math.random()*numbers.length);
+console.log("randomized index: " + randomIndex);
+let randomChoice = numbers [randomIndex] %7;
+console.log("Random choice <= 7: " + randomChoice);
+let fruitOfTheDay = fruit[randomChoice];
+console.log("Fruit of the Day: " + fruitOfTheDay);
+
+// Opdracht 6: push(), pop(), shift(), slice(), splice(), sort()
+
+fruit.push('PAPRIKA?!');                    //adds what you push to your array (last spot)
+console.log(fruit);
+fruit.pop();                                // pops the last item from your array.
+console.log(fruit);
+fruit.shift();                              // removes the first item from your array
+console.log(fruit);
+console.log("Slice: " + fruit.slice(1,4));  // Temporarily selects part of your array; 'trimmed' away to [1] and from [4]. The array itself stays as it is. 
+fruit.splice(3,0, "pineapple");             // at position 3, remove 0 items, replace with pineapple
+console.log(fruit);
+console.log("sorted the list: " + fruit.sort());                  // sorts your array, alphabetically, permenantly. 
+
+// Opdracht 7: lengte printen
+console.log("Length of fruit array: " + fruit.length);
+
+// Opdracht 8: Vervang pear met Orange
+fruit.splice(3,1,"orange");
+console.log('replaced pear with orange: ' + fruit);
+
+// Opdracht 9 Kijkend naar de fruits array. Hoe draai je de values “Aardbei” en “Mandarijn” om in de array door gebruik te maken van indices (index).
+
+fruit[7] = fruit[2];
+fruit[2] = fruit[3];
+fruit[3] = fruit[7];
+fruit.pop();
+console.log('Switched peach [2] and orange [3]: ' + fruit);
+
+</script>
+
+</body>
+</html>
+

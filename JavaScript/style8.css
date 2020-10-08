@@ -1,0 +1,44 @@
+body {
+    background: rgb(253,255,224);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,240,110,1) 100%) no-repeat;
+    font-family: sans-serif;
+    font-size: small;
+}
+.flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    }
+.card {
+    /* background: rgb(187,187,187); */
+    background: linear-gradient(0deg, rgba(187,187,187,0.4) 0%, rgba(248,248,248,0.7) 100%);
+    /* border: 1px solid white; */
+    border-radius: 4%;
+    margin: 10px 10px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);;
+}
+
+h1, h2 { 
+    text-align: center; 
+    font-variant-caps: small-caps;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+table {
+    margin: 10px 10px;
+}
+th, tfoot { 
+    border: thin solid black;
+    background:rgb(75,75,75);
+    color: white;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    padding: 4px 4px;
+}
+td {   
+    /* border: thin solid black;  */
+        font-weight: bold;
+        
+    }
+
+

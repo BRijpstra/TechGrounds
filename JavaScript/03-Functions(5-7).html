@@ -22,7 +22,7 @@
 
     <script>
 
-    // Opdracht 5 - Simple version
+// Opdracht 5 - Simple version
     const friends = ["Kim", "Sohaib", "John", "Olly", "Mo", "Hendrik", "Tony"];
     function friendCheck() {
         name1 = document.getElementById('name1').value;
@@ -33,7 +33,7 @@
                 document.getElementById('label').innerHTML = name1 + "??? What a weird name; not a friend!";
         }   }
 
-    // Opdracht 6 - incl. random assigning a name + use of arrow functions
+// Opdracht 6 - incl. random assigning a name + use of arrow functions
     let assign = () =>{
             const people = ["Kim", "Sohaib", "John", "Olly", "Mo", "Hendrik", "Tony", "Irus", "Jan", "Peter"];
             assignedPerson = people[Math.round(Math.random() * 9)];
@@ -45,7 +45,17 @@
             }
             else { document.getElementById('label3').innerHTML = "Stranger; danger!"; }
         }
-        // Notes Sohaib mbt parameter meegeven: echt alleen doen als je die meegeeft, anders loopt t spaak. Waardes die je binnen je functies pas oproept, kan je (vaak) niet buiten je functie oproepen. truc is dan die variabelen voor de functie start vast te declareren //
+    // Notes Sohaib mbt parameter meegeven: echt alleen doen als je die meegeeft, anders loopt t spaak. Waardes die je binnen je functies pas oproept, kan je (vaak) niet buiten je functie oproepen. truc is dan die variabelen voor de functie start vast te declareren //
+
+// Opdracht 7
+// Rest parameter: als je bv 8 argumenten aanvoert bij een functie die maar 2 argumenten nodig heeft, dan kan je er voor kiezen om de 'overtollige informatie' op te slaan in een array.          
+        function restFn(a,b,...rest) {
+            let product = a * b;
+            console.log(product);
+            console.log(rest);     
+    }
+    restFn(4,5,6,'ballon','slinger','taart');
+        
 
     </script>
 </body>

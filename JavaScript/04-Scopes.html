@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Scopes</title>
+</head>
+<body>
+    <h2>Exercise 1</h2>
+    <p>Results in "Uncaught ReferenceError: carBrand is not defined". The variabele is only declared within it's function, so block scoped, and therefore not accessible outside of this function. </p>
+    <br>
+    
+    <h2>Exercise 2</h2>
+    <p>Without running the function, it will result in "Uncaught ReferenceError: carBrand is not defined", since just "carBrand;" is 'seen'. </p>
+    <br>
+    
+    <h2>Exercise 3</h2>
+    <p>It is considered bad form, "polluting the root scope", but if you do run the function like this, without declaring the value either inside or outside the function, javascript will create the variable in the root of the file.</p>
+    <br>
+        
+    <h2>Exercise 4</h2>
+     <p>Calling up the printCar function will leak the carBrand to the root. By entering also a parameter for the function, the inner function is triggered. This inner function returns the console.log "Volvo v40". The typer variable itself stays undefined outside the functions scope.</p>
+    <br>
+     
+    <script>
+    //Exercise1
+        // function printCar() {
+        //     const carBrand = "Volvo";
+        // }
+        // console.log(carBrand);
+    
+    
+    // // Exercise2
+    // let carBrand;
+    //        function printCar() {
+    //            carBrand = "Volvo";
+    //        }
+    //  printCar();
+    //        console.log(carBrand);
+    
+    
+    
+     //Exercise 3
+    //  function printCar() { 
+    //  carBrand = "Volvo"; 
+    //  } 
+    //  printCar(); 
+    //  console.log(carBrand);
+    
+    
+    // Exercise4
+    function printCar() {
+               carBrand = "Volvo";
+     
+               return function(type) {
+                   console.log(carBrand + " " + type);
+               }
+           }
+     
+           const car = printCar();
+           console.log(car);
+           car("v40");
+           console.log(type);
+    
+    </script>
+    
+
+
+</body>
+</html>
