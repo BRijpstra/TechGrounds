@@ -48,18 +48,20 @@
     //  console.log(carBrand);
     
     
-    // Exercise4
+    // Exercise4.
+    //  closure gives you access to an outer function's scope from an inner function
+
     function printCar() {
                carBrand = "Volvo";
      
                return function(type) {
-                   console.log(carBrand + " " + type);
+                   console.log(carBrand + " " + type);       // inner function
                }
            }
      
-           const car = printCar();
+           const car = printCar(); // variable to function, javascript accepts it all
            console.log(car);
-           car("v40");
+           car("v40");              // outer function
            console.log(type);
     
     </script>

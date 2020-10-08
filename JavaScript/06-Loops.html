@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <div id="answer"></div>
+    
+    
+<script>
+//opdracht 1 - classic for ... loop
+console.log('>>> EXERCISE 1 - FOR...IN LOOP <<<');
+const sports = ['voetbal','basketbal','volleybal','hockey','honkbal','zwemmen','soepbal','korfbal'];
+for(let i = 0; i < sports.length; i++){
+    console.log(sports[i]);
+}
+
+// Opdracht 2: For loop, printing even numbers
+console.log('>>> EXERCISE 2 - FOR...IN (EVEN) LOOP <<<') ;
+for(let i=0; i < 21; i = i+2) {
+    console.log(i);
+}
+
+// Opdracht 3: select even entries in for loop.
+console.log('>>> EXERCISE 3 - FOR...IN (EVEN) LOOP <<<') ;
+for(let i=0; i < sports.length; i = i+2){
+    console.log(sports[i]);
+}
+// Opdracht 4 - while loop
+console.log('>>> EXERCISE 4 - WHILE LOOP<<<') ;
+let count = 0;
+while (count < sports.length){
+    console.log(sports[count]);
+    count ++;
+}
+
+// Opdracht 5
+console.log('>>> EXERCISE 5 - FOR...IN LOOP<<<') ;
+for(key in sports) console.log(sports[key]);;
+
+// opdracht 6
+console.log('>>> EXERCISE 6 - FOR...OF LOOP <<<') ;
+for (sport of sports) console.log(sport);
+
+console.log('>>> BONUS: forEach LOOP <<<') ;
+sports.forEach(sport => {
+    console.log(sport);
+})
+
+// Opdracht 7
+
+let cnt = 1;
+while (cnt == 1){
+        for(let i = 0; i < 10; i++) {
+        console.log(i);}
+        cnt ++;
+        console.log("While counter: " + cnt);
+        }
+while (cnt==2){
+        for(let i = 2; i < 21; i = i+2){console.log(i);} ;
+        cnt ++;
+        console.log("While counter: " + cnt);
+        }
+while (cnt == 3) {
+        for(let i = 3; i < 31; i = i+3){console.log(i);} ;
+        cnt ++;
+        console.log("While counter: " + cnt); 
+        }
+</script>
+</body>
+</html>
