@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Javascript Objects</title>
+</head>
+<body>
+<div id="clubs" class="clubs"></div>
+<script>
+
+//Opdracht 1
+
+function club(clname, clsport, clmembers, clinfo){
+ this.clubname = clname;
+ this.clubsport = clsport;
+ this.clubmembers = clmembers;
+ this.contactinfo = clinfo;
+}
+let club1 = new club('Fit For Freebees','Fitness','129');
+
+// Opdracht 2
+
+club1.contactinfo =["Westzijde 187", "020-0200220", "Fitte Frans"];
+console.log(club1);
+
+// Opdracht 3
+
+let club3 = new club('Basic Fut', 'futness', 99, ['Oostzijde 12', '020-2020002', 'Bolle Bennie']);
+let club2 = new club('De Vollies', 'volleybal', 54, ['Zuidzijde 21', '020-2022222', 'Vrolijke Vincent']);        
+let club4 = new club('King Pong', 'tabletennis', 6, ['Noordzijde 112', '020-0020002', 'Karel Postma']);
+let clubArray = [club1, club2, club3, club4];
+    console.log(clubArray);
+
+    for (let i = 0; i < clubArray.length; i++){
+        console.log("Print clubname: " + clubArray[i].clubname);
+    }
+
+// Opdracht 4
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    }
+const people = [
+    new Person("Jan", 24),
+    new Person("Klaas", 15),
+    new Person("Yanis", 42),
+    new Person("Rupel", 55),
+    new Person("Hendrik", 32),
+    new Person("Mono", 28),
+    new Person("West", 23)]
+
+people.sort(function(a, b) {
+    return a.age - b.age;
+    });
+console.log(people);
+
+// Opdracht 5
+//An object created with initializer is probably a bit faster typed, read & processed, but it is more limited in functionality than, well, an object constructor function. Both versions have their uses, but most importantly: the object initializer is used for singletons, the constructor for 'batches'.
+
+console.log("Opdracht 5 - added one person with Object Initializer 🔻");
+people.Person = {name:"Berend", age: 35};
+people = new Person("Klazina", 52);
+console.log(people);
+
+// Opdracht 6
+
+class Person2
+ 
+
+</script>
+</body>
+</html>
