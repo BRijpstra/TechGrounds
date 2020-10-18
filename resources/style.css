@@ -1,0 +1,62 @@
+/**************** General Styling of Webpage *********************/
+body {
+    background: linear-gradient(rgba(255,255,255,1) 0%, rgba(224,221,221,1) 67%, rgba(255,255,255,1) 100%) no-repeat;
+    font-family: 'Jockey One', sans-serif;
+    font-size: 15px;
+    }
+h1, h2, h3 { font-family: ;  margin: 0px 0px; }
+h1 { font-size: 4em;}
+h2 { font-size: 2em; padding-bottom: 12px;}
+h3 { font-size: 1.8em;}
+
+/******************** Introduction *************************/
+
+.introduction {
+    margin: auto;
+    width: 850px;
+    text-align: center;
+    font-size: 2.3em;
+}
+.green { color: rgb(0,225,0);}
+
+/******************** Flip-card Basics *************************/
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px; }
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 4px 4px 14px black; }
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* -webkit-backface-visibility: hidden; Safari */ }
+.flip-card-front { background-color: white;  }
+.flip-card-back { color: white; transform: rotateY(180deg); }
+img { width: 100%; height: 100%; }
+
+/******************** Backside Layout *************************/
+.flip-card-back, html5 { background-color: #E54D26; }
+
+
+
+
+.fc-back-top { background-color: RGB(150,150,150); text-shadow: 2px 2px 6px rgba(0,0,0,0.5); }
+.fc-back-bottom { 
+    display: flex; 
+    justify-content: center; 
+    }
+nav {       text-align: left; padding: 4px 20px;}
+nav ul {    list-style-type: none; margin: 0 0; padding: 0 0; }
+nav a {     color: rgba(255,255,255,0.8); text-decoration: none; }
+nav a:hover {color: rgba(255,255,255,1); }
+
