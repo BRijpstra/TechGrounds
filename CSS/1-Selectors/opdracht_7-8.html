@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 1.7</title>
+    <link rel="stylesheet" href="styles7.css">
+</head>
+<body>
+    <div>
+    <h1>Type selectors</h1>
+    <p>Veggies es bonus vobis, proinde vos postulo essum magis <span>kohlrabi welsh onion</span> daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+    <p id="darkgold">This is a paragraph with dark golden identity.</p>
+    <p>Gumbo beet greens corn soko <strong>endive</strong> gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+    <p>Turnip greens yarrow ricebean rutabaga <em>endive cauliflower</em> sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach
+    </p>
+    <p class="colortext">This is a paragraph with a colorful class.</p>
+    <p class="colortext">This is also a colorful paragraph.</p>    
+    <a href="https://www.w3schools.com">w3schools.com</a>
+    <a href="http://www.disney.com" target="_blank">disney.com</a>
+    <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+</div>
+<br>
+<article>
+    <span>This is not red.</span>
+    <p>Here is a paragraph.</p>
+    <code>Here is some code.</code><br>
+    <span>And here is a red span!</span><br>
+    <span>And this is a red span!</span><br>
+    <code>More code...</code>
+    <div>A div adjacent to a -code- in lightblue
+    <p> Whatever it may be, keep smiling. </p> </div>
+    <h1> Dream big </h1>
+    <h2> that's all. </h2> 
+    
+    <span>And yet again this is a red span!</span>
+</article>
+</body>
+</html>
+
+<!--
+Opdracht 1.8
+Leg in eigen woorden uit wat met cascade en inheritance wordt bedoeld. Maak voorbeelden om je antwoord uit te leggen.
+
+Een cascade is zoiets als een trapsgewijze waterval. In het geval van CSS wordt het cascade genoemd omdat er meerdere trappen zijn waarin de CSS wordt toegepast.
+Binnen de stylesheet zijn er verschillende prioriteiten, en dan vervolgens zijn er ook nog waardes die inherited zijn, dus niet direct benoemd, maar 'geerfd' van dingen die niet direct zichtbaar zijn, zoals je browser user agent instellingen of specifieke instellingen van de user.
+
+Als er voor 1 attribute meerdere keren een waarde wordt aangegeven, dan zal de hoogste prioriteit de doorslaggevende factor zijn. Als een element meerdere keren waardes krijgt toegekend, die elkaar niet in de weg zitten, dan zullen al die waardes worden toegekend. Van laagste naar hoogste prioriteit gekeken is dit de volgorde die wordt aangehouden:
+
+0. Declaraties in user agent style sheets (browser's default styles)
+1. Declaraties in user style sheets (custom styles van de gebruiker).
+2. Declaraties in author style sheets (wat wij als web developers in styles.css of in de html coderen).
+3. !Important declaraties in author style sheets (hiermee kunnen we alle andere declaraties overrulen)
+4. !Important declaraties in user style sheets (waarmee users alles kunnen overrulen). Slechtzienden kunnen bijvoorbeeld font size overrulen om alles toch leesbaar voor hen te krijgen.
+
+Dit in acht nemende, is er vervolgens ook een volgorde in hoe belangrijk de selector is: Hoe specifieker de selector, hoe belangrijker de regel wordt gezien. Dus:
+    inherited < tag selector < attribute selector < class selector < ID selector < local HTML value

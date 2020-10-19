@@ -3,14 +3,20 @@ body {
     background: linear-gradient(rgba(255,255,255,1) 0%, rgba(224,221,221,1) 67%, rgba(255,255,255,1) 100%) no-repeat;
     font-family: 'Jockey One', sans-serif;
     font-size: 15px;
+    text-align: center;
+    margin: 0;
     }
-h1, h2, h3 { font-family: ;  margin: 0px 0px; }
+h1, h2, h3, h4, h5 { font-family: ;  margin: 0px 0px; }
 h1 { font-size: 4em;}
-h2 { font-size: 2em; padding-bottom: 12px;}
+h2 { font-size: 1.8em; padding-bottom: 12px;}
 h3 { font-size: 1.8em;}
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.3em; }
 
 /******************** Introduction *************************/
-
+.header {
+    width: 1200px;
+}
 .introduction {
     margin: auto;
     width: 850px;
@@ -20,11 +26,18 @@ h3 { font-size: 1.8em;}
 .green { color: rgb(0,225,0);}
 
 /******************** Flip-card Basics *************************/
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(95deg, rgba(0,225,0,0.4) 0%, rgba(94,192,150,0.4) 80%) }
 .flip-card {
     background-color: transparent;
     width: 400px;
     height: 400px;
-    perspective: 1000px; }
+    perspective: 1000px;
+    margin: 30px 30px;
+    flex: 0 0 25%; }
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -38,25 +51,23 @@ h3 { font-size: 1.8em;}
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
-    /* -webkit-backface-visibility: hidden; Safari */ }
+    backface-visibility: hidden; }
 .flip-card-front { background-color: white;  }
-.flip-card-back { color: white; transform: rotateY(180deg); }
-img { width: 100%; height: 100%; }
+.flip-card-front img { width: 100%; height: 100%; }
+.flip-card-back { color: white; transform: rotateY(180deg);}
 
 /******************** Backside Layout *************************/
-.flip-card-back, html5 { background-color: #E54D26; }
+#HTML5 { background-color: #E54D26; }
+#CSS3 { background-color: #0170BA; }
+#Sass { background-color: #CC6799}
+#Bootstrap { background-color: #563D7C;}
+#Javascript { background-color: #E9CA32;}
 
-
-
-
-.fc-back-top { background-color: RGB(150,150,150); text-shadow: 2px 2px 6px rgba(0,0,0,0.5); }
-.fc-back-bottom { 
-    display: flex; 
-    justify-content: center; 
-    }
-nav {       text-align: left; padding: 4px 20px;}
-nav ul {    list-style-type: none; margin: 0 0; padding: 0 0; }
-nav a {     color: rgba(255,255,255,0.8); text-decoration: none; }
-nav a:hover {color: rgba(255,255,255,1); }
+.fc-back-top { 
+    background-color: RGB(160,160,160); text-shadow: 2px 2px 6px rgba(0,0,0,0.5);}
+.fc-back-bottom { display: flex; justify-content: center; flex-wrap: wrap; }
+.nav { text-align: left; padding: 10px 20px; align-content: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.5)}
+.nav ul {    list-style-type: none; margin: 0 0; padding: 0 0; }
+.nav a {     color: rgba(255,255,255,0.84); text-decoration: none; }
+.nav a:hover {color: rgb(255,255,255); }
 

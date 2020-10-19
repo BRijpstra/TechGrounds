@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display & Position - 1 t/m 6</title>
+    <style>
+        h3 {
+        position: absolute;
+        left: 250px;
+        top: 0px;
+        background-color: red;
+        }
+        h2 {
+        position: relative;
+        left: 20px;
+        top: 20px;
+        background-color: red;
+        }
+        img {
+        position: absolute;
+        top: 370px;
+        left: 2px;
+        z-index: -1;
+        }
+        .outer {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+        .inner {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 25px;
+            top: 25px;
+            background-color: red;
+        }        
+    </style>
+</head>
+<body>
+    <h1>Opdracht 1</h1>
+    <ul>
+        <li>static; volgt de standaard positioning rules en flow van html.</li>
+        <li>relative; geeft een verschuiving aan vanaf de standaard static position. <br>right 20 px betekent dat je element 20 pixels naar rechts schuift.</li>
+        <li>absolute; definieer positie t.o.v. de (relative!) container waar die in zit. <br>Right 20px betekent dat je element op 20px afstand van de rechter rand <br>van de dichtsbijzijnde RELATIVE container komt te staan.</li>
+        <li>Fixed: geeft een positie aan je element waar het ook blijft staan. <br>Een menubalk kan je op deze manier altijd bovenaan je webpagina houden.</li>
+        <li>Sticky: Combineert de standaard eigenschappen met fixed; <br>gebruikelijk staat het element waar het staat, maar als je naar beneden scrollt, <br>dan komt het sticky gedeelte into play en blijft het element daar bovenaan 'hangen'.</li>
+    </ul>
+    
+    <h3>Opdr. 2+4 - Absolute Positionering t.o.v. html</h3>
+    <h2>Opdr. 3. Relatieve Positionering</h2>
+    <p>Dit is een paragraaf.</p> 
+    <br>
+
+    <img src="bg-blur.jpeg">
+    <h1>Dit is opdracht 5</h1>
+    <p>Dit is een paragraaf.</p> 
+    <p>Dit is nog een paragraaf.</p> 
+<br>
+<br>
+   
+    <h1>Opdracht 6</h1>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+    
+</body>
+</html>
