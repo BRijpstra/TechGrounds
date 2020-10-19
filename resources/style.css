@@ -70,6 +70,6 @@ h5 { font-size: 1.3em; }
 .fc-back-bottom { display: flex; justify-content: center; flex-wrap: wrap; }
 .nav { text-align: left; padding: 10px 20px; align-content: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.5)}
 .nav ul {    list-style-type: none; margin: 0 0; padding: 0 0; }
-.nav a {     color: rgba(255,255,255,0.84); text-decoration: none; }
+.nav a {     color: rgba(255,255,255,0.8); text-decoration: none; }
 .nav a:hover {color: rgb(255,255,255); }
 
