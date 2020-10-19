@@ -37,7 +37,9 @@ h5 { font-size: 1.3em; }
     height: 400px;
     perspective: 1000px;
     margin: 30px 30px;
-    flex: 0 0 25%; }
+    padding: 0 80px;
+    /* flex: 0 0 30%;  */
+}
 .flip-card-inner {
     position: relative;
     width: 100%;
