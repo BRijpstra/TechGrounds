@@ -2,7 +2,7 @@
 body {
     background: linear-gradient(rgba(255,255,255,1) 0%, rgba(224,221,221,1) 67%, rgba(255,255,255,1) 100%) no-repeat;
     font-family: 'Jockey One', sans-serif;
-    font-size: 15px;
+    font-size: 1.1vw;
     text-align: center;
     margin: 0;
     }
@@ -15,15 +15,15 @@ h5 { font-size: 1.3em; }
 
 /******************** Introduction *************************/
 .header {
-    width: 1200px;
+    width: 1150px;
 }
 .introduction {
     margin: auto;
-    width: 850px;
+    width: 50vw;
     text-align: center;
     font-size: 2.3em;
 }
-.green { color: rgb(0,225,0);}
+.green { color: rgb(0,225,0); font-size: 1.5em;}
 
 /******************** Flip-card Basics *************************/
 .card-container {
@@ -33,8 +33,8 @@ h5 { font-size: 1.3em; }
     background: linear-gradient(95deg, rgba(0,225,0,0.4) 0%, rgba(94,192,150,0.4) 80%) }
 .flip-card {
     background-color: transparent;
-    width: 400px;
-    height: 400px;
+    width: 30vw;
+    height: 30vw;
     perspective: 1000px;
     margin: 30px 30px;
     padding: 0 80px;
@@ -66,10 +66,10 @@ h5 { font-size: 1.3em; }
 #Javascript { background-color: #E9CA32;}
 
 .fc-back-top { 
-    background-color: RGB(160,160,160); text-shadow: 2px 2px 6px rgba(0,0,0,0.5);}
+    background-color: RGB(160,160,160); text-shadow: 2px 2px 6px rgba(0,0,0,0.6);}
 .fc-back-bottom { display: flex; justify-content: center; flex-wrap: wrap; }
-.nav { text-align: left; padding: 10px 20px; align-content: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.5)}
+.nav { text-align: left; padding: 10px 20px; align-content: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.6)}
 .nav ul {    list-style-type: none; margin: 0 0; padding: 0 0; }
-.nav a {     color: rgba(255,255,255,0.8); text-decoration: none; }
-.nav a:hover {color: rgb(255,255,255); }
+.nav a {     color: rgba(255,255,255,1); text-decoration: none; }
+.nav a:hover {color: rgba(255,255,255,0.88); }
 

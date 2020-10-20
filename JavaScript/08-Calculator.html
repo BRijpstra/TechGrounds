@@ -17,34 +17,34 @@
     <div class="keys">
   <!-- 4 rows of keys -->
     <div class="row">
-        <button value="AC" class="operator">AC</button>
-        <button value="±" class="operator">±</button>
-        <button value="%" class="operator">%</button>
-        <button value="/" class="operator">/</button>
+        <button value="AC" class="operator" onclick="clean()">AC</button>
+        <button value="±" class="operator"  onclick="insert(*-1)">±</button>
+        <button value="%" class="operator" onclick="insert('%')">%</button>
+        <button value="/" class="operator" onclick="insert('/')">/</button>
     </div>
       <div class="row">
-        <button value="7">7</button>
-        <button value="8">8</button>
-        <button value="9">9</button>
-        <button value="*" class="operator">x</button>
+        <button value="7" onclick="insert(7)">7</button>
+        <button value="8" onclick="insert(8)">8</button>
+        <button value="9" onclick="insert(9)">9</button>
+        <button value="*" class="operator" onclick="insert(*)">x</button>
       </div>
       <div class="row">
-        <button value="4">4</button>
-        <button value="5">5</button>
-        <button value="6">6</button>
-        <button value="-" class="operator">-</button>
+        <button value="4"  onclick="insert(4)">4</button>
+        <button value="5"  onclick="insert(5)">5</button>
+        <button value="6"  onclick="insert(6)">6</button>
+        <button value="-" class="operator"  onclick="insert(-)">-</button>
       </div>
       <div class="row">
-        <button value="1">1</button>
-        <button value="2">2</button>
-        <button value="3">3</button>
-        <button value="+" class="operator">+</button>
+        <button value="1"  onclick="insert(1)">1</button>
+        <button value="2"  onclick="insert(2)">2</button>
+        <button value="3"  onclick="insert(3)">3</button>
+        <button value="+" class="operator"  onclick="insert(+)">+</button>
       </div>
       <div class="row">
-        <button value="M" class="operator">M</button>
-        <button value="0">0</button>
-        <button value=".">.</button>
-        <button value="=" class="operator">=</button>
+        <button value="?" class="operator">?</button>
+        <button value="0"  onclick="insert(0)">0</button>
+        <button value="."  onclick="insert(.)">.</button>
+        <button value="=" class="operator"  onclick="insert(=)">=</button>
       </div>
     </div>
   </div>
