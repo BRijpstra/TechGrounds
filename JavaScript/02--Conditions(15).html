@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS - Conditions 15</title>
+    <title>JS - Guess the Word</title>
     
 <style>
+html {
+    font-family: sans-serif;
+}
+
+.words {
+    width: 1000px;
+    display: flex;
+}
+
 .words button {
     position: relative;
-    border: 1px solid black;
+    border: 1px solid grey;
     border-radius: .5em;
    background-color: white;
-   padding: .5em;
+   padding: 0.5em 1.7em;
    cursor: pointer;
    transition: background-color .3s ease-in-out;
    z-index: 1;
@@ -19,11 +28,12 @@
 .words button:focus {
    outline: none;
    background-color: grey;
+   color: white;
 }
 .words .fg {
    position: absolute;
    content: '';
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
@@ -31,7 +41,10 @@
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    background-color: white;
+    background-color: rgb(240,240,240);
+    color: rgb(255,255,255);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4
+    );
     z-index: 2;
     transition: width .3s ease-out;
     overflow: hidden;
@@ -46,12 +59,23 @@
     font-size: 2em;
     font-weight: 900;
 }
+
 </style>
 </head>
 <body>
 
-<h1>​​Guess the word​</h1>
-<section>
+<h1>​​Guess The Word​</h1>
+
+<pre> Deze applicatie moet het volgende kunnen doen:
+● Het bijhouden van het aantal pogingen voor het raden van het woord.
+● Na 3 keer raden is het game over en moet het volgende tekst op het scherm
+weergegeven worden: “Game Over. The correct word is >theCorrectWord<”. 
+De p.label kun je hiervoor gebruiken om de tekst op het scherm weer te geven.
+● Als het woord goed geraden is dan toon je het volgende tekst op het scherm: “You
+have guessed the correct word; >theCorrectWord<"!. </pre>
+<hr>
+
+<section><br>
     <div class="words">   
         <button onclick="guess(this)"><div class="fg">Show</div><span>Together</span></button>
         <button onclick="guess(this)"><div class="fg">Show</div><span>Teamwork</span></button>
@@ -62,21 +86,36 @@
         <button onclick="guess(this)"><div class="fg">Show</div><span>Dislike</span></button>
         <button onclick="guess(this)"><div class="fg">Show</div><span>Money</span></button>
         <button onclick="guess(this)"><div class="fg">Show</div><span>Important</span></button>
-        </div>
+        </div><br><hr>
 ​</​section​>
 
 <div>
-    <span>​The number of wrong guessing: <span id="count">0</span></span>
+    <span>​Attempted guesses: <span id="count">0</span></span>
     <p id="label"></p>
 </div>
-
+<hr>
 <script>
 
-const​ ​words​ = [​"Together"​, ​"Teamwork"​, ​"Scrum"​, ​"Individual"​, ​"Moments"​, ​"Like"​, ​"Dislike"​, "Money"​, ​"Important"​];​
-const​ ​guessingWord​ = ​words​[​Math​.​round​(​Math​.​random​() * (words.length - 1))];
-​
-function​ ​guess​(​obj​) {
-    let choice = obj.children[1].innerHTML;
+const words = ["Together", "Teamwork", "Scrum", "Individual", "Moments", "Like", "Dislike", "Money", "Important"];
+const randomWord = words[Math.round(Math.random() * (words.length - 1))];
+
+function guess(obj) {
+    let count = document.getElementById('count').textContent;
+    if (count < 3) {
+        let choice = obj.children[1].innerHTML;
+        count++;
+        document.getElementById('count').textcontent = count;
+                   
+            if (randomWord !== choice && count < 3) {
+            document.getElementById('label').textContent = 'Nope! Guess again'; 
+            }
+            else if (randomWord !== choice && count = 3) {
+            document.getElementById('label').textContent = 'Strrrrrike three and your out! The word was ' + randomWord + '. GAME OVER';
+            location = location 
+            }
+            }
+    }
+    
     console.log(obj.children[1].innerHTML);
     // 
     //conditions oproepen en checken of t gelijk is. Boolean result != ===
@@ -86,11 +125,3 @@ function​ ​guess​(​obj​) {
 </body>
 </html>
 
-<!-- Deze applicatie moet het volgende kunnen doen:
-● Het bijhouden van het aantal pogingen voor het raden van het woord.
-● Na 3 keer raden is het game over en moet het volgende tekst op het scherm
-weergegeven worden: “Game Over. The correct word is <het woord dat geraden
-moest worden>”. De p.label kun je hiervoor gebruiken om de tekst op het scherm
-weer te geven.
-● Als het woord goed geraden is dan toon je het volgende tekst op het scherm: “”You
-have guessed the correct word! <het woord dat geraden moest worden>. -->

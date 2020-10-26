@@ -1,8 +1,103 @@
-.color1 { color: #4B86CB; }
-.color2 { color: #a0aec0; }
-.color3 { color: #C5DEEA; }
+/************** GENERAL **************/
 
-table {
-    width: 700px;
-    text-align: left;
+body { font-family: sans-serif; margin: 0; }
+h1 { color: #4B86CB; font-size: 60px; font-weight: 900; margin: 10px 0px; }
+h2 { color: #4B86CB; font-size: 32px; font-weight: 900; margin: 20px 0px; }
+h3 { color: white; font-size: 24px; margin: 10px 25px;}
+
+.page-container { display: flex; justify-content: space-between; }
+
+/************** MENU **************/
+
+.navigatie {
+    width: fit-content;
+    white-space: nowrap;
+    height: 100vh;
+    background-color: #4B86CB;
+    text-align: center;
+}
+
+ul { text-align: left; list-style-type: none; padding: 0px 28px ; }
+li { padding: 2px 2px; font-variant: small-caps; font-size: 20px; }
+a  { text-decoration: none; color: white;}
+a:hover { opacity: 80%;}
+
+/* ::after construction used for a non-JS collapsible effect */
+
+.link1::after { content: " dashboard";}
+.link2::after { content: " user profile";}
+.link3::after { content: " members";}
+.link4::after { content: " assignments";}
+.link5::after { content: " blogs";}
+
+/**************** RIGHT SIDE ***************/
+
+.container-right {
+    text-align: center;
+    display: flexbox;
+    justify-content: space-between;
+}
+
+/**************** TABLE ********************/
+
+table { width: 70vw; text-align: left; }
+td { [padding: 5px 5px;]}
+tr:nth-child(even) {background: #a0aec0;; }
+tr:hover {background: #6caefa}
+
+/********** ADDITIONAL INFORMATION *************/
+
+form {
+    width: 60vw;
+    margin: 0 auto;
+}
+.input-container {
+    display: flex;
+    flex-flow: row wrap;
+    border: none;
+}
+input {
+    line-height: 2em; 
+    font-size: 1.1em;
+    padding-left: 8px;
+    background-color: lightblue;
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+}
+.input-set {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    padding: 10px;
+}
+.input-set:nth-child(1) { flex: 1 1 55%;}
+.input-set:nth-child(2) { flex: 1 1 25%;}
+.input-set:nth-child(3) { flex: 1 1 10%;}
+.input-set:nth-child(4) { flex: 1 1 30%;}
+.input-set:nth-child(5) { flex: 1 1 35%;}
+.input-set:nth-child(6) { flex: 1 1 25%;}
+.input-set:nth-child(7) { flex: 1 1 100%;}
+.input-set:nth-child(8) { flex: 1 1 25%;}
+.input-set:nth-child(9) { flex: 1 1 15%;}
+.input-set:nth-child(10) { flex: 1 1 30%;}
+
+/********** iPad & Mobile Adaption **********/
+
+@media (max-width:768px) {
+    .page-container {flex-direction: column;}
+    .navigatie { height: fit-content; width: 100vw;}
+    
+    ul {display: flex; justify-content: space-around;}
+    li {display: inline-block;}
+    .link1::after { content: "";}
+    .link2::after { content: "";}
+    .link3::after { content: "";}
+    .link4::after { content: "";}
+    .link5::after { content: "";}
+    
+    table {margin: auto;}
+
+    form { width:80vw; }
+    .input-set:nth-child(n) { flex: 1 1 100%; }
 }

@@ -34,16 +34,16 @@ nav {
     right: 0;
     width: 100%;
     text-align: end;
-    }
+}
 nav ul {
     align-items: center;
     list-style-type: none;
     margin: 0px 5px;
-    }
+}
 nav li {
     display: inline-block;
     padding: 18px 10px;
-    }
+}
 
 a:hover { color: rgb(097, 135, 216);
         text-shadow: 1px 1px 3px rgba(0,0,0,0.3);  }

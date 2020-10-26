@@ -5,92 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Members Page</title>
     <link rel="stylesheet" href="style_B.css">
-    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet"> 
 </head>
 
 <body>
-    <h1>Members</h1>
-    <hr>
-    <table rules="all" border="1">
-        <tr>
-            <th>First Name</th>
-            <th>Surname</th>
-            <th>Age</th>
-        </tr>
-       <tr>
-           <td>Klaas</td>
-           <td>Jan</td>
-           <td>34</td>
-       </tr>
-       <tr>
-           <td>Jennis</td>
-           <td>Lee</td>
-           <td>25</td>
-       </tr>
-       <tr>
-           <td>Cameron</td>
-           <td>Lion</td>
-           <td>16</td>
-       </tr>
-       <tr>
-           <td>Anthony</td>
-           <td>Bos</td>
-           <td>66</td>
-       </tr>
-       <tr>
-           <td>Frits</td>
-           <td>Kosnovia</td>
-           <td>33</td>
-       </tr>
-       <tr>
-           <td>Venezuela</td>
-           <td>Kosnovia</td>
-           <td>57</td>
-       </tr>
-       <tr>
-           <td>Bosnia</td>
-           <td>Kovic</td>
-           <td>43</td>
-       </tr>
-    </table>
-    <form action="mailto:inf" method="POST" enctype="text/plain">
-        <div>
-            <h2>Additional Information</h2>
-            <div>
-                <label>First name:</label>
-                <input type="text" name="voornaam">
-                <label>Surname: </label>
-                <input type="text" name="achternaam">
-                <label>Age:</label>
-                <input type="text" name="leeftijd">
+<div class="page-container">
+
+    <nav class="navigatie">
+        <h3>MENU</h3>
+        <hr>
+        <ul>
+            <li><a class='link1' href="#"><i class="lni lni-blackboard"></i></a></li>
+            <li><a class='link2' href="#"><i class="lni lni-user"></i></a></li>
+            <li><a class='link3' href="#"><i class="lni lni-network"></i></a></li>
+            <li><a class='link4' href="#"><i class="lni lni-archive"></i></a></li>
+            <li><a class='link5' href="#"><i class="lni lni-bookmark-alt"></i></a></li>
+        </ul>
+    </nav>
+        
+    <div class="container-right">
+
+        <h1>Members</h1>
+            <hr><br>
+    
+        <table rules="all" border="1">
+            <tr>
+                <th>First Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Klaas</td>
+                <td>Jan</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>Jennis</td>
+                <td>Lee</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Cameron</td>
+                <td>Lion</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Anthony</td>
+                <td>Bos</td>
+                <td>66</td>
+            </tr>
+            <tr>
+                <td>Frits</td>
+                <td>Kosnovia</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>Venezuela</td>
+                <td>Kosnovia</td>
+                <td>57</td>
+            </tr>
+            <tr>
+                <td>Bosnia</td>
+                <td>Kovic</td>
+                <td>43</td>
+            </tr>
+        </table>
+        
+        <h2>Additional Information</h2>
+
+        <form method="post">
+            <div class="input-container">
+                <div class="input-set">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname">
+                </div>
+                <div class="input-set">
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname" name="surname">
+                </div>
+                <div class="input-set">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age">
+                </div>
+               
+                <div class="input-set">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="input-set">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                 <div class="input-set">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="input-set">
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" id="address">
+                </div>
+                <div class="input-set">
+                    <label for="city">City:</label>
+                    <input type="text" name="city" id="city">
+                </div>
+                <div class="input-set">
+                    <label for="postalcode">Postal Code:</label>
+                    <input type="text" name="postalcode" id="postalcode">
+                </div>
+                <div class="input-set">
+                    <label for="country">Country:</label>
+                    <input type="text" name="country" id="country">
+                </div>
+                
             </div>
-            <div>
-                <label>Company:</label>
-                <input type="text" name="bedrijf">
-                <label>Username:</label>
-                <input type="text" name="gebruiker">
-                <label>E-mail:</label>
-                <input type="email" name="email">
-            </div>
-            <div>
-                <label>Address:</label>
-                <input type="text" style="width: 668px" name="adres">
-            </div>
-            <div>
-                <label>City:</label>
-                <input type="text" name="stad">
-                <label>Country</label>
-                <input type="text" name="stad">          
-                <label>Postal code:</label>
-                <input type="text" name="postcode">
-            </div>  
-        </div>
+        </form>        
+    </div>
+    <div> </div>
+    </div>
+
+
 </body>
 </html>
-
-<!--
-About dividing star part:Kristoffer: yes i used a row span to align to complete structure of the page..
-Stars: SVG for the icons. / https://fontawesome.com/icons?d=gallery&q=star
-table is outdated
-
--->

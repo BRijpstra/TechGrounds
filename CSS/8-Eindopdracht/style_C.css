@@ -1,0 +1,83 @@
+/************** GENERAL **************/
+
+body { font-family: sans-serif; margin: 0; }
+h1 { color: #4B86CB; font-size: 60px; font-weight: 900; margin: 10px 0px; }
+h2 { color: #4B86CB; font-size: 24px; font-weight: 900; margin: 20px 0px; }
+h3 { color: white; font-size: 24px; margin: 10px 25px;}
+
+
+
+/************** MENU **************/
+
+.navigatie {
+    width: fit-content;
+    white-space: nowrap;
+    height: 125vh;
+    background-color: #4B86CB;
+    text-align: center; }
+ul { text-align: left; list-style-type: none; padding: 0px 28px ; }
+li { padding: 2px 2px; font-variant: small-caps; font-size: 20px; }
+a  { text-decoration: none; color: white;}
+a:hover { opacity: 80%;}
+/* collapsible effect */
+.link1::after { content: " dashboard";}
+.link2::after { content: " user profile";}
+.link3::after { content: " members";}
+.link4::after { content: " assignments";}
+.link5::after { content: " blogs";}
+
+/**************** Layour ***************/
+
+.page-container { display: flex;  }
+
+.kim-container {
+    display: flex;
+    margin: 20px 20px;
+}
+
+
+/**************** Kim Sing Core ***************/
+
+.profile {
+    margin: 0px auto;
+}
+
+/**************** Kim Sing Properties *************/
+h2 {
+    background-color: #4B86CB;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px ;
+}
+
+.properties { 
+    padding-left: 25px;}
+
+.personalia {
+    display: flex;
+    flex-wrap: wrap; 
+    max-width: 370px;
+    justify-content: space-between;
+    text-decoration-line: underline;"
+    }
+
+img {
+    max-width: 540px;
+}
+
+/********** iPad & Mobile Adaption **********/
+
+@media (max-width:768px) {
+    .page-container {flex-direction: column;}
+    .kim-container { flex-direction: column;}
+    .navigatie { height: fit-content; width: 100vw;}
+    
+    ul {display: flex; justify-content: space-around;}
+    li {display: inline-block;}
+    .link1::after { content: "";}
+    .link2::after { content: "";}
+    .link3::after { content: "";}
+    .link4::after { content: "";}
+    .link5::after { content: "";}
+}
