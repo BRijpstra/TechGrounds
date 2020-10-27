@@ -10,10 +10,7 @@ html {
     font-family: sans-serif;
 }
 
-.words {
-    width: 1000px;
-    display: flex;
-}
+.words { width: 1000px; display: flex; }
 
 .words button {
     position: relative;
@@ -25,11 +22,7 @@ html {
    transition: background-color .3s ease-in-out;
    z-index: 1;
 }
-.words button:focus {
-   outline: none;
-   background-color: grey;
-   color: white;
-}
+
 .words .fg {
    position: absolute;
    content: '';
@@ -43,22 +36,20 @@ html {
     border-radius: inherit;
     background-color: rgb(240,240,240);
     color: rgb(255,255,255);
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4
-    );
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
     z-index: 2;
     transition: width .3s ease-out;
     overflow: hidden;
 }
-.words button:hover .fg {
-    width: 0;
-    z-index: 1;
-}.words button:focus .fg {
-    width: 0;
+
+.words button:focus {
+   outline: none;
+   background-color: grey;
+   color: white;
 }
-.answer {
-    font-size: 2em;
-    font-weight: 900;
-}
+.words button:hover .fg { width: 0; z-index: 1; }
+.words button:focus .fg { width: 0; }
+.answer { font-size: 2em; font-weight: 900; }
 
 </style>
 </head>
@@ -86,11 +77,11 @@ have guessed the correct word; >theCorrectWord<"!. </pre>
         <button onclick="guess(this)"><div class="fg">Show</div><span>Dislike</span></button>
         <button onclick="guess(this)"><div class="fg">Show</div><span>Money</span></button>
         <button onclick="guess(this)"><div class="fg">Show</div><span>Important</span></button>
-        </div><br><hr>
+    </div><br><hr>
 ​</​section​>
 
 <div>
-    <span>​Attempted guesses: <span id="count">0</span></span>
+    <span>​Attempted guesses: <span id="pogingen">0</span></span>
     <p id="label"></p>
 </div>
 <hr>
@@ -98,28 +89,31 @@ have guessed the correct word; >theCorrectWord<"!. </pre>
 
 const words = ["Together", "Teamwork", "Scrum", "Individual", "Moments", "Like", "Dislike", "Money", "Important"];
 const randomWord = words[Math.round(Math.random() * (words.length - 1))];
+let count = document.getElementById('pogingen').textContent;
 
 function guess(obj) {
-    let count = document.getElementById('count').textContent;
-    if (count < 3) {
-        let choice = obj.children[1].innerHTML;
-        count++;
-        document.getElementById('count').textcontent = count;
-                   
-            if (randomWord !== choice && count < 3) {
-            document.getElementById('label').textContent = 'Nope! Guess again'; 
-            }
-            else if (randomWord !== choice && count = 3) {
-            document.getElementById('label').textContent = 'Strrrrrike three and your out! The word was ' + randomWord + '. GAME OVER';
-            location = location 
-            }
-            }
-    }
+
+    count++;
+    console.log(count);
+    document.getElementById('pogingen').innerHTML = count; 
     
-    console.log(obj.children[1].innerHTML);
-    // 
-    //conditions oproepen en checken of t gelijk is. Boolean result != ===
-};
+    let choice = obj.children[1].innerHTML;
+
+            if (randomWord == choice) {
+                document.getElementById('label').textContent = 'It was [' + randomWord + '] indeed! You might be clearvoyant!';     
+            }
+
+            else if (randomWord !== choice && count < 3) {
+                document.getElementById('label').textContent = 'Not really, guess again'; 
+            }
+            else {
+                document.getElementById('label').textContent = "Strrrrrike three: you're out! The word was [" + randomWord + ']. GAME OVER.';
+            
+            }
+            }
+    
+    
+
 
 </script>
 </body>

@@ -6,11 +6,55 @@
     <title>JS - Conditions 1 to 8</title>
 </head>
 <body>
+<pre>
+    <h1>>opdracht 1 + 2 + 3 + 4 + 5 + 7 </h1>
+
+    function checkNumber(){
+        let number = document.getElementById('number').value;
+        // console.log(number);
+        if (number==3) {
+            document.getElementById('label').innerHTML = "The number you entered is equal to 3!"; }
+        else if (number >= 11) {
+            document.getElementById('label').innerHTML = "The number you entered is equal to or even greater than 11!"; }
+        else if (number > 4) {
+            document.getElementById('label').innerHTML = "The number you entered is larger than 4!"; }
+        else if (number <pre 3) {
+            document.getElementById('label').innerHTML = "The number you entered is smaller than 3!"; }
+        else {
+            document.getElementById('label').innerHTML = ""; }
+        } </pre>
     <label>Enter a number:</label>
     <input type="number" name="number" id="number">
     <button id="btn" onclick="checkNumber()">Compare</button>
     <br><br>
     <div> <span id="label"></span> </div>
+    <hr>
+    <h1>Opdracht 6</h1>
+!= comparison is TRUE if value A is NOT equal to B. This comparison looks at the actual value of different datatypes
+!== comparison is TRUE if value or datatype A is NOT equal to that of B.
+console.log('8 != "5"? ' + (8 != "5"));
+console.log('5 != "5"? ' + (5 != "5"));
+console.log('5 !== "5"? ' + (5 !== "5"));
+Result from console.log:</pre>
+        <code>
+            02-Conditions(1-8).html:73 8 != "5"? true
+            02-Conditions(1-8).html:74 5 != "5"? false
+            02-Conditions(1-8).html:75 5 !== "5"? true
+            </code>
+
+<h1>Opdracht 8</h1>
+<pre> The strict equality comparison is the reverse of the "!==" comparison. "===" will return a boolean; 
+true if the compared values are exactly the same, false if they differ in value or type.
+console.log('1===1? ' + (1 === 1));
+console.log('1==="1"? ' + (1 === "1"));
+console.log(`"hello"==='hello'? ` + ("hello" === 'hello'));
+Result from console.log:</pre>
+    <code>
+        02-Conditions(1-8).html:80 1===1? true
+        02-Conditions(1-8).html:81 1==="1"? false
+        02-Conditions(1-8).html:82 "hello"==='hello'? true
+        </code>
+
     
 <script>
     
