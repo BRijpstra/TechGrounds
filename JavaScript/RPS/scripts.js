@@ -1,15 +1,15 @@
 document.getElementById("readybanner").onclick = function(e) {    e.target.style.display = 'none';
 }
 
-let playerScore = 0;
-let CPUScore = 0;
+let scorePlayer = 0;
+let scoreCPU = 0;
 
-let weapons = [{ name:'rock', icon: '<i class="fas fa-hand-rock"></i>'},{ name:'paper', icon: '<i class="fas fa-hand-paper"></i>'}, {name:'scissors', icon:'<i class="fas fa-hand-scissors"></i>'}];
-    let randomItem = items[Math.floor(Math.random()*3)].name;
+let weapons = [rock, paper, scissors];
+let randomPRS = weapons[Math.floor(Math.random()*3)];
 
 function choose(obj) {
  
-
+let play = btnElement.innerHTML; 
 
 
 

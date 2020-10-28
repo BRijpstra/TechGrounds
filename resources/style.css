@@ -1,11 +1,21 @@
 /**************** General Styling of Webpage *********************/
 body {
-    background: linear-gradient(rgba(255,255,255,1) 0%, rgba(224,221,221,1) 67%, rgba(255,255,255,1) 100%) no-repeat;
     font-family: 'Jockey One', sans-serif;
     font-size: 1.1vw;
     text-align: center;
     margin: 0;
+    /* background: linear-gradient(rgba(255,255,255,1) 0%, rgba(224,221,221,1) 67%, rgba(255,255,255,1) 100%) no-repeat; */
+    background: linear-gradient(299deg, #e4e4e4, #a5f9cd, #8efbf7);
+    background-size: 800% 800%;
+    animation: TGinMotion 10s ease infinite;
     }
+    @keyframes TGinMotion {
+        0%{background-position:0% 9%}
+        50%{background-position:100% 92%}
+        100%{background-position:0% 9%}
+    }
+    
+    
 h1, h2, h3, h4, h5 { font-family: ;  margin: 0px 0px; }
 h1 { font-size: 4em;}
 h2 { font-size: 1.8em; padding-bottom: 12px;}
@@ -18,19 +28,21 @@ h5 { font-size: 1.3em; }
     width: 1150px;
 }
 .introduction {
+    color: rgb(80,190,80);
     margin: auto;
     width: 50vw;
     text-align: center;
     font-size: 2.3em;
+    mix-blend-mode: difference;
 }
-.green { color: rgb(0,225,0); font-size: 1.5em;}
+.green { color: rgb(40,130,40); font-size: 1.5em;}
 
 /******************** Flip-card Basics *************************/
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: linear-gradient(95deg, rgba(0,225,0,0.4) 0%, rgba(94,192,150,0.4) 80%) }
+    background: rgba(100,100,100,0.3)}
 .flip-card {
     background-color: transparent;
     width: 30vw;
