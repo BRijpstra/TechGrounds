@@ -4,10 +4,9 @@ body {
     font-size: 1.1vw;
     text-align: center;
     margin: 0;
-    /* background: linear-gradient(rgba(255,255,255,1) 0%, rgba(224,221,221,1) 67%, rgba(255,255,255,1) 100%) no-repeat; */
-    background: linear-gradient(299deg, #e4e4e4, #a5f9cd, #8efbf7);
+    background: linear-gradient(299deg, #ffffff, #84f7e4);
     background-size: 800% 800%;
-    animation: TGinMotion 10s ease infinite;
+    animation: TGinMotion 8s ease infinite;
     }
     @keyframes TGinMotion {
         0%{background-position:0% 9%}
@@ -25,17 +24,31 @@ h5 { font-size: 0.85em; }
 
 /******************** Introduction *************************/
 .header {
-    width: 1150px;
+    width: 75vw;
 }
 .introduction {
-    color: rgb(80,190,80);
+    color: rgb(0,30,30);
     margin: auto;
     width: 50vw;
     text-align: justify;
-    font-size: 1.8em;
-    mix-blend-mode: difference;
-}
-.green { color: rgb(40,130,40); font-size: 1.5em; text-align: right;}
+    font-size: 1.8em; }
+.green { 
+    color: rgb(40,240,40); 
+    font-size: 1.5em; 
+    text-align: right;
+    mix-blend-mode: screen;}
+
+.animate__animated.animate__bounceInDown {
+    --animate-duration: 1s;
+    --animate-delay: 2.5s;}
+
+.animate__animated.animate__bounceInLeft {
+    --animate-duration: 1s;
+    --animate-delay: 2s;}
+
+.animate__animated.animate__bounceInRight {
+        --animate-duration: 1s;
+        --animate-delay: 1.8s;}
 
 /******************** Flip-card Basics *************************/
 .card-container {
@@ -51,7 +64,7 @@ h5 { font-size: 0.85em; }
     perspective: 1000px;
     margin: 10px 10px;
     padding: 0 80px;
-    /* flex: 0 0 30%;  */
+    
 }
 .flip-card-inner {
     position: relative;
